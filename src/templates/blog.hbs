@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{pagetitle}}</title>
+    <link rel="stylesheet" href="assets/css/style-{{dir}}.min.css">
+    {{>loader}}
+</head> 
+<body>
+  
+<header class="main-header"  >
+	{{>topbar}}    
+  	{{>navbar active='news'}} 
+</header>  
+{{>pageheader image='blog-header.jpg' title="page name"}}
+ 
+<section class="blog-page ">
+    <div class="container  pb-5">
+        <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <div class="blog-img animate fadeInUp"  data-wow-duration="500ms"  data-wow-delay="100ms" >
+                            <img src="assets/img/blog-image.jpg" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                        <div class="blog-info">
+                             <span class="blog-date animate fadeInUp"  data-wow-duration="500ms"  data-wow-delay="200ms">{{blog.date}}</span>
+                            <h4 class="c-tit gold mt-0 animate fadeInUp"  data-wow-duration="500ms"  data-wow-delay="200ms"><strong>{{blog.name}}</strong></h4> 
+                           
+                            <div class="animate fadeInUp"  data-wow-duration="500ms"  data-wow-delay="250ms">{{{blog.text}}}</div>
+                        </div>
+                </div>
+        </div>
+    </div>
+</section>
+ 
+
+ 
+{{>footer}} 
+{{>bottombar}}
+<script src="assets/js/script.min.js"></script> 
+</body> 
+</html>  
+
+

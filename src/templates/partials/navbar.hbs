@@ -1,0 +1,21 @@
+<section class="main-navbar">
+    <div class="container">
+        <img src="assets/img/logo-{{dir}}.png" class="main-logo" alt="">
+        <div class="row justify-content-end">
+            <nav class="navbar navbar-expand-md sticky-top navbar-light  ">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    {{#each navigation}}
+                            <li class="nav-item {{#isequal ../active active}}active{{/isequal}} animate fadeIn"     data-wow-duration="600ms" data-wow-delay="{{@index}}00ms">
+                                <a class="nav-link" href="{{link}}">{{name}}</a>
+                            </li>
+                    {{/each}}
+                </ul>
+            </div>
+            </nav>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,29 @@
+ <section class="latestprojects"  data-parallax="scroll" data-image-src="assets/img/bg-projects.jpg">
+     <div class="container">
+         <div class="row justify-content-center mb-5">
+                <div class="col text-center">
+                    <h3 class="mb-3 c-gold text-capitalize proitem"><strong>{{our_projects}}</strong></h3>
+                    <p>{{our_projects_text}}</p>
+                </div>
+         </div>
+         <div class="row">
+             {{#each_upto our_projects_list 6}}
+                <div class="col-md-4 col-sm-6">
+                    <article class="pro-item  animate fadeIn"    data-wow-duration="600ms" data-wow-delay="100ms">
+                        <div class="img">
+                            <img src="assets/img/projects/{{img}}" alt="img01"/>
+                        </div>
+                        <div class="info">
+                            <h4>{{name}}</h4>
+                            <p>{{text}}</p>
+                            <a href="{{link}}" class="btn btn-outline-white rounded-0 ">{{../read_more}}</a>
+                        </div>
+                    </article>
+
+                </div>
+             {{/each_upto}}
+         </div>
+     </div>
+ </section>
+ 
+ 

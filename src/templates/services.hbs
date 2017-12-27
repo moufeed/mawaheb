@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{pagetitle}}</title>
+    <link rel="stylesheet" href="assets/css/style-{{dir}}.min.css">
+    {{>loader}}
+</head> 
+<body>
+  
+<header class="main-header"  >
+	{{>topbar}}   
+  	{{>navbar active='services'}} 
+</header>  
+  
+ 
+
+  
+{{>pageheader image='services-header.jpg' title=our_services}}
+
+
+ <section class="pt-5 pb-5 service-item-1 services-items"> 
+        <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-5 col-lg-4 animate fadeInUp"  data-wow-duration="600ms"  data-wow-delay="100ms">
+                        <img src="assets/img/services/main-{{our_services_list.0.img}}" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-md-7 col-lg-8 animate fadeInUp"  data-wow-duration="600ms"  data-wow-delay="200ms">
+                        <h4 class="c-tit dark"><strong> {{our_services_list.0.name}}</strong></h4>
+                        <div class="services-content">
+                          {{{our_services_list.0.text}}}
+                        </div>
+                    </div>
+                </div>
+        </div>
+ </section>
+
+<section class="pt-5 pb-5 service-item-2 services-items">
+        <div class="container">
+                 <div class="row align-items-center">
+                    <div class="col-md-7 col-lg-8 animate fadeInUp" data-wow-offset="50" data-wow-duration="600ms"  data-wow-delay="200ms">
+                        <h4 class="c-tit dark" ><strong>{{our_services_list.1.name}}</strong></h4>
+                        <div class="services-content">
+                        {{{our_services_list.1.text}}}
+                        </div>
+                    </div>
+                    <div class="col-md-5 col-lg-4 animate fadeInUp"  data-wow-offset="50" data-wow-duration="600ms"  data-wow-delay="100ms">
+                        <img src="assets/img/services/main-{{our_services_list.1.img}}" class="img-fluid" alt="">
+                    </div>
+                </div>
+        </div>
+ </section> 
+
+
+<section class="pt-5 pb-5 service-item-3 services-items">
+    <div class="container">
+    <div class="row align-items-center">
+            
+            <div class="col-md-5 col-lg-4 animate fadeInUp"  data-wow-duration="600ms"  data-wow-delay="100ms">
+                <img src="assets/img/services/main-{{our_services_list.2.img}}" class="img-fluid" alt="">
+            </div>
+            <div class="col-md-7 col-lg-8 animate fadeInUp"  data-wow-duration="600ms"  data-wow-delay="200ms">
+                <h4 class="c-tit dark"><strong>{{our_services_list.2.name}}</strong></h4>
+                <div class="services-content">
+                  {{{our_services_list.2.text}}}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+ 
+{{>footer}}  
+{{>bottombar}}
+<script src="assets/js/script.min.js"></script> 
+</body> 
+</html>  

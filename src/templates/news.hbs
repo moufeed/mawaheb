@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{pagetitle}}</title>
+    <link rel="stylesheet" href="assets/css/style-{{dir}}.min.css">
+    {{>loader}}
+</head>  
+<body>
+  
+<header class="main-header"  >
+	{{>topbar}}    
+  	{{>navbar active='news'}} 
+</header>  
+   
+{{>pageheader image='news-header.jpg' title=our_news}}
+
+<section class="news-section pt-5 pb-5">
+    <div class="container">
+        <div class="row   ">
+            {{#each news_list}}
+                <div class="col-md-6">
+                    <article class="news-item d-flex align-items-end justify-content-start animate fadeInUp"  data-wow-duration="500ms"  data-wow-delay="{{delay 12 @index }}0ms" >
+                        <div class="image">
+                           <a href="{{link}}">{{../read_more}}</a> 
+                           <img src="assets/img/news/{{img}}" alt="{{name}}"> 
+                        </div>
+                        <div class="info">
+                            <h6><a href="{{link}}">{{name}}</a></h6>
+                            <span>{{date}}</span>
+                            <p>{{text}}</p>
+                        </div>
+                    </article>
+                </div> 
+            {{/each}}
+        </div>
+    </div>
+</section>
+ 
+{{>footer}} 
+{{>bottombar}}
+<script src="assets/js/script.min.js"></script> 
+</body> 
+</html>  

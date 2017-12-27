@@ -1,0 +1,23 @@
+@charset "UTF-8";
+$dir :rtl;
+$img:"../img/";
+$font:"../fonts/";
+$black :#000000;
+$white :#ffffff;
+// fontawesome 
+$fa-font-path:        "../fonts/fa" ; 
+
+
+
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+@import '../../node_modules/font-awesome/scss/font-awesome.scss';
+@import 'mixins/config';
+@import 
+    'lib/animate',
+    'lib/fonts'
+;
+
+
+@import "lib/bootstrap-4-rtl"; 
+ 
+  
