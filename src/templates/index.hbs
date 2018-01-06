@@ -1,4 +1,4 @@
-<!doctype html>
+ <!doctype html>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -6,156 +6,38 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{home}}</title>
     <link rel="stylesheet" href="assets/css/style-{{dir}}.min.css">
-	 <link rel="stylesheet" href="assets/css/slider.min.css">
-	 {{>loader}}
+  
 </script>
 </head>
 <body>
+      
+<div class="container full-height bg-white bg-shadow p-0">
+   <header class="">
+       <div class="row no-gutters justify-content-between align-items-center bg-dark" >
+           <div class="col-lg-auto">
+                {{>navigation}}
+           </div>
+           <div class="col-lg-auto">
+               {{>social}}
+           </div> 
+       </div>
+       <div class="row mx-0 justify-content-between align-items-center pt-4 pb-4 px-4">
+           <div class="col-md-auto logo-col">
+               <a href="index.html">
+                   <img src="assets/img/logo.png" alt="logo">
+               </a>
+           </div>
+           <div class="col-md-auto">
+               <img src="assets/img/tmp-728.jpg" class="img-fluid" alt="">
+           </div>
+       </div>
+   </header> 
+
+
+   {{>section-a}}
    
- <header class="main-header">
-	{{>topbar}}   
-  	{{>navbar active='index'}} 
- </header>  
-
-  {{>slider}}
-  {{>description}} 
-  {{>latestprojects}}
-  {{>services}}
-  {{>contact}} 
-  {{>map}}
-  {{>footer}} 
-  {{>bottombar}}
-
+</div>
+ 
 <script src="assets/js/script.min.js"></script>
- <script src="assets/js/slider.min.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQOA4-dMup6O_XDMJfFBd1Je93XoSxRRI"></script>
-    <script>
-
-    var mapStyle = [
-	{
-		"featureType": "landscape",
-		"stylers": [
-			{
-				"hue": "#FFBB00"
-			},
-			{
-				"saturation": 43.400000000000006
-			},
-			{
-				"lightness": 37.599999999999994
-			},
-			{
-				"gamma": 1
-			}
-		]
-	},
-	{
-		"featureType": "road.highway",
-		"stylers": [
-			{
-				"hue": "#FFC200"
-			},
-			{
-				"saturation": -61.8
-			},
-			{
-				"lightness": 45.599999999999994
-			},
-			{
-				"gamma": 1
-			}
-		]
-	},
-	{
-		"featureType": "road.arterial",
-		"stylers": [
-			{
-				"hue": "#FF0300"
-			},
-			{
-				"saturation": -100
-			},
-			{
-				"lightness": 51.19999999999999
-			},
-			{
-				"gamma": 1
-			}
-		]
-	},
-	{
-		"featureType": "road.local",
-		"stylers": [
-			{
-				"hue": "#FF0300"
-			},
-			{
-				"saturation": -100
-			},
-			{
-				"lightness": 52
-			},
-			{
-				"gamma": 1
-			}
-		]
-	},
-	{
-		"featureType": "water",
-		"stylers": [
-			{
-				"hue": "#0078FF"
-			},
-			{
-				"saturation": -13.200000000000003
-			},
-			{
-				"lightness": 2.4000000000000057
-			},
-			{
-				"gamma": 1
-			}
-		]
-	},
-	{
-		"featureType": "poi",
-		"stylers": [
-			{
-				"hue": "#00FF6A"
-			},
-			{
-				"saturation": -1.0989010989011234
-			},
-			{
-				"lightness": 11.200000000000017
-			},
-			{
-				"gamma": 1
-			}
-		]
-	}
-];
-      function initialize() {
-
-        var mapCanvas = document.getElementById('map');
-        var mapOptions = {
-          center: new google.maps.LatLng(24.706767, 46.799025),
-          zoom: 13,
-           styles: mapStyle,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
-        }
-        var map = new google.maps.Map(mapCanvas, mapOptions);
-         var image = 'assets/img/pin.png';
-		  var mapMarker = new google.maps.Marker({
-			position: {lat:24.706767, lng: 46.799025},
-			map: map,
-			icon: image
-		  });
-      }
-
-      google.maps.event.addDomListener(window, 'load', initialize);
-    </script>
-
-
 </body> 
 </html>  

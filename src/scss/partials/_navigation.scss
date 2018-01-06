@@ -1,0 +1,39 @@
+
+/// rtl mode
+.dropdown-menu{
+    text-align: right;
+    left: auto;
+    right: 0;
+    border-radius: 0;
+}
+
+.main-navbar{
+    padding: 0;
+  .navbar-nav{
+      padding: 0;
+    .nav-link{
+        transition: all .22s;
+        padding: 8px 15px;
+        color: $white;
+        &:hover{
+            background: $bright_purple;
+        }
+        @include media-breakpoint-up(lg) {
+            line-height:40px;
+        }
+        @include media-breakpoint-down(md) {
+            text-align: center;
+            border-bottom: 1px dashed rgba($white,.1)
+        }
+    }
+    .nav-item {
+        .dropdown-item{
+            transition: all .3s;
+            &:hover{
+                background: $grayish_purple;
+                color: $white;
+            }
+        }
+    }
+  }
+}

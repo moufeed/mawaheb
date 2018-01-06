@@ -1,0 +1,36 @@
+
+body{
+    background:$light;
+    direction: rtl;
+    font-family: 'g-light' ,$font-family-sans-serif;
+    text-align: right;
+} 
+.bg-white{
+    background: $white;
+}
+
+.main-container{
+    
+}
+.bg-shadow{
+    position: relative;
+     box-shadow: 0 0 20px -5px rgba($grayish_purple,.5);
+}
+.full-height{
+    min-height: 100vh;
+}
+
+ 
+
+ 
+$sides :(
+    top : 0,
+    bottom : 100%
+) ;
+    @each $side in $sides{
+        @each $color in $line-colors{
+            .line-#{nth($color,1)}-#{nth($side,1)}{
+                    background: linear-gradient(to bottom, nth($color,2) 0%, nth($color,2) 100%) 0 #{nth($side,2)} / 100% 50px no-repeat;
+            }
+        }
+}

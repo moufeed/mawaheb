@@ -70,6 +70,9 @@ var config = {
                 },
                 plus: function (num, inc) {
                     return num + inc;
+                },
+                random : function (min,max){
+                    return Math.floor(Math.random() * (max - min + 1)) + min;
                 }
             }
         }
@@ -90,7 +93,7 @@ gulp.task('hbs', function () {
             gutil.log(gutil.colors.red('[Error]'), err.toString());
         })
         .pipe(rename({
-            suffix: '-rtl',
+            // suffix: '-rtl',
             extname: '.html'
         }))
         .pipe(gulp.dest('dist'))
@@ -241,3 +244,37 @@ handlebars.Handlebars.registerHelper('each_fromto', function (ary, from, max, op
         result.push(options.fn(ary[i]));
     return result.join('');
 });
+
+
+
+
+handlebars.Handlebars.__switch_stack__ = [];
+
+handlebars.Handlebars.registerHelper( "switch", function( value, options ) {
+    handlebars.Handlebars.__switch_stack__.push({
+        switch_match : false,
+        switch_value : value
+    });
+    var html = options.fn( this );
+    handlebars.Handlebars.__switch_stack__.pop();
+    return html;
+} );
+handlebars.Handlebars.registerHelper( "case", function( value, options ) {
+    var args = Array.from( arguments );
+    var options = args.pop();
+    var caseValues = args;
+    var stack = handlebars.Handlebars.__switch_stack__[handlebars.Handlebars.__switch_stack__.length - 1];
+    
+    if ( stack.switch_match || caseValues.indexOf( stack.switch_value ) === -1 ) {
+        return '';
+    } else {
+        stack.switch_match = true;
+        return options.fn( this );
+    }
+} );
+handlebars.Handlebars.registerHelper( "default", function( options ) {
+    var stack = handlebars.Handlebars.__switch_stack__[handlebars.Handlebars.__switch_stack__.length - 1];
+    if ( !stack.switch_match ) {
+        return options.fn( this );
+    }
+} );

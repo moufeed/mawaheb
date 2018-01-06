@@ -1,0 +1,34 @@
+
+
+.sociallist{
+    margin: 0 15px;
+    a{
+        color:$white;
+        display: inline-block;
+        i{
+            line-height: 40px;
+            @include square(40px);
+            text-align: center;
+            transition: all .3s;
+        }
+        
+        &:hover{
+            text-decoration: none;
+            i{
+                background: $soft_purple;
+            }
+            @each $i in $social-colors{
+                [class*="fa-#{nth($i,1)}"]{
+                    background:  nth($i,2);
+                }
+            }
+        }
+    }
+}
+
+.logo-col{
+    @include media-breakpoint-down(sm) {
+        text-align: center;
+       padding-bottom: 25px;
+    }
+}

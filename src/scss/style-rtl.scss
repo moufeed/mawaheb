@@ -4,6 +4,36 @@ $img:"../img/";
 $font:"../fonts/";
 $black :#000000;
 $white :#ffffff;
+$light : #f5f5f5;
+
+$gray :#a1a1a1;
+
+$grayishnavy :#34374C; //titles
+
+$black_rock :#2c2e3e;
+
+$light_green :#c2f970;
+
+$light_violet :#dccbec;
+
+
+$dull_red :#b43630;
+
+$soft_purple :#7E61AA;
+$bright_purple :#8560A8;
+$grayish_purple : #A186BE;
+
+
+
+
+
+$line-colors :(
+    violet : $light_violet,
+    purple : $bright_purple,
+    red : $dull_red
+);
+
+
 // fontawesome 
 $fa-font-path:        "../fonts/fa" ; 
 
@@ -20,4 +50,9 @@ $fa-font-path:        "../fonts/fa" ;
 
 @import "lib/bootstrap-4-rtl"; 
  
-  
+@import "partials/default",
+        "partials/header",
+        "partials/navigation",
+        "partials/section-a"
+
+;
