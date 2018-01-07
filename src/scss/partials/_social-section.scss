@@ -1,0 +1,64 @@
+ 
+.elan{
+    background-color: lighten($gray ,15%);
+    text-align: center;
+}
+.social-box{
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+    &:not(.snapchat){
+        color: $white;
+    }
+    &:after{
+        @include absolute(bottom left , -45% -15%);
+        font-family: FontAwesome;
+        color: rgba($white,.3);
+        font-size: 200px;
+    }
+    div,p{
+        position: relative;
+        z-index: 1;
+    }
+    .btn{
+        padding: 2px 15px;
+    }
+    .prief{
+        margin-bottom: 0;
+        margin-top: 20%;
+        @include media-breakpoint-up(md){
+            width: 60%;
+            margin-top: 30%;
+            b{
+                display: block;
+            }
+        }
+    }
+}
+
+@each $itm in  $social {
+    .social-box.#{nth($itm,1)}{
+        background-color: nth(nth($itm,2),1);
+        &:after{
+            content: '#{nth(nth($itm,2),2)}';
+        }
+    }
+}
+ /*
+ <div class="col-md-3">
+                  <article class="social-box instagram h-100">
+                      <div class="d-flex flex-wrap justify-content-between align-items-center">
+                          <span>
+                                <i class="fa fa-instagram"></i>
+                                    instagram
+                          </span>
+                           <a href=""  class="btn btn-outline-dark">تابعنا</a>
+                      </div>
+
+                      <p class="prief">
+                           مواهب سوريا   دعم جميع المواهب بكافة  أشكالها 
+                      </p>
+                  </article>   
+                </div>
+ 
+ */

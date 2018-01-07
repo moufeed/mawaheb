@@ -1,5 +1,5 @@
  <!doctype html>
-<html>
+<html class="no-js">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -7,13 +7,15 @@
     <title>{{home}}</title>
     <link rel="stylesheet" href="assets/css/style-{{dir}}.min.css">
     <link rel="stylesheet" href="assets/plugins/video-js/video-js.min.css">
+    <script>document.documentElement.className = 'js';</script>
 </script>
 </head>
 <body>
       
 <div class="container full-height bg-white bg-shadow p-0">
    <header class="">
-       <div class="row no-gutters justify-content-between align-items-center bg-dark" >
+       <div class="mainnavbar container p-0">
+           <div class="row no-gutters justify-content-between align-items-center bg-dark " >
            <div class="col-lg-auto col-md-8">
                 {{>navigation}}
            </div>
@@ -21,6 +23,8 @@
                {{>social}}
            </div> 
        </div>
+       </div>
+       
        <div class="row mx-0 justify-content-between align-items-center pt-4 pb-4 px-4">
            <div class="col-lg-auto logo-col col-md-3">
                <a href="index.html">
@@ -33,7 +37,7 @@
        </div>
    </header> 
 
-
+    {{>slider}}
    {{>section-a}}
    <div class="end-section-bar ">
         <a href="" class="btn btn-outline-light">{{more}}</a>
@@ -43,8 +47,27 @@
         <a href="" class="btn btn-outline-light">{{more}}</a>
    </div>
    {{>social-section}}
-</div>
+
+    {{>footer}}
+
+
+</div> 
  
+<div class="search-box">
+        <button id="btn-search-close" class="btn btn-outline-light btn--search-close" aria-label="Close search form">
+            <i class="fa fa-times"></i>
+        </button>
+        <form class="search__form" action="">
+            <input class="search__input " name="search" type="search" 
+            placeholder="ادخل كلمة البحث" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+            <div class="search--btn">
+                <button type="submit" >
+                         بحث
+                </button>
+            </div>
+        </form> 
+				 
+</div><!-- /search -->
 
 <script src="assets/js/script.min.js"></script>
 <script src="assets/plugins/video-js/video.min.js"></script>

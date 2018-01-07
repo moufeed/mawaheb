@@ -1,0 +1,82 @@
+.main-footer{
+    background-color: $dark_grayishnavy;
+    color: $white;
+    min-height: 300px;
+
+    .biography{
+        padding: 15px;
+        
+        img{
+            margin-bottom: 35px;
+        }
+        a{
+          
+            color: #ccafea;
+        }
+        @include media-breakpoint-down(sm){
+            text-align: center;
+        }
+    }
+    .title{
+        margin:25px 15px;
+    }
+    ul{
+        list-style: none;
+        padding: 0 15px 0 0;
+      
+        
+        li{
+            margin-bottom: 10px;
+        }
+        a{
+            color: $white;
+            transition: all .3s;
+            display: block;
+            margin:0 15px;
+            i{
+                color: #ccafea;
+                margin-left:5px; 
+                transition: all .2s;
+            }
+            &:hover{
+                color: lighten($green, 10%);
+                text-decoration: none;
+               .fa-dot-circle-o:before{
+                        content: '\f111'
+                }
+               .fa-angle-double-left:before{
+                content: '\f0d9'
+               }
+            }
+        }
+    }
+}
+
+.bottom-bar{
+    width: 80%;
+    margin: 0 auto;
+    border-top: 1px solid #30304e;
+    padding: 15px 0;
+    p{
+        margin: 0;
+    }
+}
+
+
+@include media-breakpoint-down(sm){
+            .liks_list{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                a{
+                    margin-top: 35px;
+                    color: #ccafea;
+                }
+            }
+            .bottom-bar p {
+                margin-bottom: 25px;
+            }
+}
+
+
+   

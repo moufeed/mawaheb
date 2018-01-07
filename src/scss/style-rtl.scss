@@ -24,7 +24,7 @@ $bright_purple :#8560A8;
 $grayish_purple : #A186BE;
 
 $dark_purple: #28134c;
-
+$dark_grayishnavy :#11111d;
 
 $sides-Y :(
     top : 0,
@@ -50,7 +50,12 @@ $overlay-colors:(
     navy : $grayishnavy,
 );
 
-// fontawesome 
+ $social : (
+    "snapchat" : #fffc00 '\f2ac',
+    "facebook" : #4267b2 '\f082',
+    "instagram" : #cd486b '\f16d'
+ );
+// fontawesome  
 $fa-font-path:        "../fonts/fa" ; 
 
 
@@ -68,8 +73,11 @@ $fa-font-path:        "../fonts/fa" ;
  
 @import "partials/default",
         "partials/header",
+        "partials/search",
+        "partials/slider",
         "partials/navigation",
         "partials/sections-home",
-        "partials/social-section"
+        "partials/social-section",
+        "partials/footer"
 
 ;

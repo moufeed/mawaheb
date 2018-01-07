@@ -17,7 +17,11 @@ h4,h5,h6{
 .bg-white{
     background: $white;
 }
-
+.en{
+    direction: ltr;
+    font-family:$font-family-sans-serif;
+   
+}
 [data-cate-text]{
     position: relative;
     &:before{
@@ -180,4 +184,21 @@ h4,h5,h6{
     a{
         padding: 6px 35px;
     }
+}
+.back-to-top{
+    @include fixed(bottom right,15px 15px);
+    @include square(40px);
+    background: rgba($light_violet , .7);
+    color: $black_rock;
+    font-size: 24px;
+    text-align: center;
+    line-height: 40px;
+    display: none;
+    z-index: 15000;
+}
+ 
+.fixed-top{
+    position: fixed;
+    width: 100%;
+    z-index: 150000;
 }
