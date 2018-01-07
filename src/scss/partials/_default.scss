@@ -90,15 +90,15 @@ h4,h5,h6{
     .item-#{nth($color,1)}{
     .img{  
         &:before{
-            background: rgba(nth($color,2), .5);
+            background: rgba(nth($color,2), .5) !important;
         }
         &:after{
-            background: rgba($white,.2);
+            background: rgba($white,.2) !important;
             color: $white;
         }
     }
     footer i{
-            color: nth($color,2);
+            color: nth($color,2) !important;
         }
     }
 }

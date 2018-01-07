@@ -232,13 +232,13 @@ $_50px: 50px;
             color: $black;
         }
         .writer-img{
-            @include square($_50px);
+            @include square(55px);
             border-radius: 50%;
             overflow: hidden;
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-top:( $_50px - 10) * -1 ;
+            margin-top:-55px ;
             margin-left:5px;
         }
         .icon{
