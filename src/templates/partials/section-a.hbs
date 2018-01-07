@@ -1,51 +1,102 @@
+<section class="section-news section-a row no-gutters " data-cate-text="منوعات" data-cate-left>
+    {{#each section_a}} {{#switch type}} {{#case "full"}}
+    <div class=" item-fullwidth row no-gutters align-items-end line-violet-bottom item-violet">
+        <div class="col-md-5 p-0">
+            <div class="img-col ">
+                <img src="assets/img/news/{{@index}}.jpg" alt="" class="img-fluid">
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-5 offset-md-1">
+            <article>
+                <h3>
+                    <a href="">{{title}}</a>
+                </h3>
+                <p class="prief">{{text}}</p>
+                <footer class="d-flex  align-items-center">
+                    <span class="writer-img d-none d-md-block">
+                        <img src="assets/img/avaters/0.png" alt="">
+                    </span>
+                    <span class="ml-auto">
+                        <p>
+                            <i class="fa fa-user-o"></i> {{writer}}</p>
+                        <p>
+                            <i class="fa fa-clock-o"></i> {{date}}</p>
 
-<section class="section-news section-a row no-gutters " data-cate="منوعات">
-   {{#each section_a}}
-           {{#switch type}}
-                {{#case "full"}}
-                <div class="sec-item full-width row no-gutters align-items-end line-violet-bottom">
-                    <div class="col-md-5 p-0">
-                        <div class="img-col">
-                                 <img src="assets/img/news/{{@index}}.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-5 offset-md-1">
-                         <article>
-                             <h3><a href="">{{title}}</a></h3>
-                            <p>{{text}}</p>
-                       
-                         <footer class="d-flex  align-items-center">
-                                <span class="writer-img">
-                                    <img src="assets/img/avaters/0.png" alt="">
-                                </span>
-                                <span class="ml-auto"> 
-                                    <p><i class="fa fa-user-o"></i> {{writer}}</p>
-                                    <p><i class="fa fa-clock-o"></i> {{date}}</p>
-                                
-                                </span>
-                                <a href="#" class="btn btn-outline-light ">
-                                    {{../read_more}}
-                                </a>
-                         </footer>
-                        </article>
-                    </div>
+                    </span>
+                    <a href="#" class="btn btn-outline-light ">
+                        {{../read_more}}
+                    </a>
+                </footer>
+            </article>
+        </div>
+    </div>
+    {{/case}}
+    {{#case "bg-img"}} 
+        <div class="col-lg-6 col-md-4">
+            <article class="item-bg {{class}} d-flex  justify-content-center align-items-center flex-column  " 
+                style="background-image:url('assets/img/news/{{@index}}.jpg')">
+                <div class="content text-center">
+
+                    <span class="date"> <i class="fa fa-clock-o"></i> {{date}}</span>
+                            {{#if video}}
+                                <video id="videoplaye" class="video-js vjs-fluid video-skin-purple" controls preload="auto"  
+                                    poster="assets/img/news/{{@index}}.jpg" data-setup=" ">
+                                    <source src="assets/videos/1.mp4" type='video/mp4'>
+                                    <source src="assets/videos/1.webm" type='video/webm'>
+                                    <p class="vjs-no-js">
+                                    To view this video please enable JavaScript, and consider upgrading to a web browser that
+                                    <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                                </p>
+                            </video>
+                            {{/if}}
+                           
+                            
+                            <h4 class="title"><a href="">{{title}}</a></h4>
+                            <small class="writer"> <i class="fa fa-user-o"></i> {{writer}}</small>
+                    
                 </div>
-                   
-                {{/case}}
-                {{#case "bg-img"}}
-                
-                {{/case}}
-                {{#default}}
-                
-                {{/default}}    
-            {{/switch}}
-   {{/each}}
-
-</section>  
-
-
- 
-
-
-
- 
+            </article> 
+        </div>
+    {{/case}} 
+    {{#default}}
+    <div class="col-lg-3 col-md-4">
+        <article class="item-normal item-purple">
+            <a href="#" class="img">
+                <img src="assets/img/news/{{@index}}.jpg" alt="">
+            </a>
+            <div class="info">
+                <small class="date">{{date}}</small>
+                <h5>
+                    <a href="">{{title}}</a>
+                </h5>
+                <p class="prief">{{text}}</p>
+            </div>
+            <footer>
+                <div class="top-f">
+                    <p>
+                        <i class="fa fa-user-o"></i> {{writer}}</p>
+                </div>
+                <div class="bottom-f d-flex  align-items-center">
+                    <span class="writer-img d-none d-md-block">
+                        <img src="assets/img/avaters/1.png" alt="">
+                    </span>
+                      {{#if counts}}
+                    <span class="ml-auto">
+                        <span class="icon">
+                            <i class="fa fa-eye"></i>
+                            {{random 280 500}}
+                        </span>
+                        <span class="icon">
+                            <i class="fa fa-comments"></i>
+                            {{random 100 400}}
+                        </span>
+                    </span>
+                    {{/if}}
+                    <a href="#">
+                        <i class="fa fa-share-alt"></i>
+                    </a>
+                </div>
+            </footer>
+        </article>
+    </div>
+    {{/default}} {{/switch}} {{/each}}</section>

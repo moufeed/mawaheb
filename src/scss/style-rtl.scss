@@ -23,9 +23,13 @@ $soft_purple :#7E61AA;
 $bright_purple :#8560A8;
 $grayish_purple : #A186BE;
 
+$dark_purple: #28134c;
 
 
-
+$sides-Y :(
+    top : 0,
+    bottom : 100%
+);
 
 $line-colors :(
     violet : $light_violet,
@@ -33,6 +37,18 @@ $line-colors :(
     red : $dull_red
 );
 
+$colors-sec:(
+    purple : $bright_purple,
+    red : $dull_red
+);
+
+$overlay-colors:(
+    #{'black'} : $black,
+    #{'white'} : $white,
+    purple : $bright_purple,
+    red : $dull_red,
+    navy : $grayishnavy,
+);
 
 // fontawesome 
 $fa-font-path:        "../fonts/fa" ; 
@@ -53,6 +69,6 @@ $fa-font-path:        "../fonts/fa" ;
 @import "partials/default",
         "partials/header",
         "partials/navigation",
-        "partials/section-a"
+        "partials/sections-home"
 
 ;

@@ -4,13 +4,46 @@ body{
     direction: rtl;
     font-family: 'g-light' ,$font-family-sans-serif;
     text-align: right;
+    @include media-breakpoint-down(sm){
+        padding: 0 15px;
+    }
 } 
+h1,h2,h3{
+font-family: 'g-bold' ,$font-family-sans-serif;
+}
+h4,h5,h6{
+    font-family: 'g-medium' ,$font-family-sans-serif;
+}
 .bg-white{
     background: $white;
 }
 
-.main-container{
-    
+[data-cate-text]{
+    position: relative;
+    &:before{
+        position: absolute;
+        content: attr(data-cate-text);
+        font-size: 840%;
+        color: $white;
+        font-family: 'g-bold';
+        text-shadow: 0 0 1px $gray,0 0 2px $gray;
+        
+        z-index: 0;
+    }
+    &[data-cate-left]:before{
+        left: 12%;
+    }
+    &[data-cate-right]:before{
+        right: 15%;
+    }
+    @include media-breakpoint-down(sm){
+        &[data-cate-left]:before{
+            left:5px;
+        }
+        &[data-cate-right]:before{
+            right: 5px;
+        }
+    }
 }
 .bg-shadow{
     position: relative;
@@ -22,15 +55,129 @@ body{
 
  
 
- 
-$sides :(
-    top : 0,
-    bottom : 100%
-) ;
-    @each $side in $sides{
+.img-col{
+    position: relative;
+    &:after{
+        position: absolute;
+        @include size(100%,50px);
+        content: '';
+        z-index: 1;
+    }
+}
+
+    @each $side in $sides-Y{
         @each $color in $line-colors{
             .line-#{nth($color,1)}-#{nth($side,1)}{
                     background: linear-gradient(to bottom, nth($color,2) 0%, nth($color,2) 100%) 0 #{nth($side,2)} / 100% 50px no-repeat;
+                    .img-col:after{
+                        #{nth($side,1)}:0;
+                        background: linear-gradient(to right,nth($color,2)  0%,rgba(nth($color,2),0) 75%) 0 #{nth($side,2)} /100% no-repeat;
+                    }
+                    .img-col.toleft:after{
+                        #{nth($side,1)}:0;
+                        background: linear-gradient(to left,nth($color,2)  0%,rgba(nth($color,2),0) 75%) 0 #{nth($side,2)} /100% no-repeat;
+                    }
             }
         }
+        
+        
+}
+
+
+
+
+@each $color in $colors-sec{
+    .item-#{nth($color,1)}{
+    .img{  
+        &:before{
+            background: rgba(nth($color,2), .5);
+        }
+        &:after{
+            background: rgba($white,.2);
+            color: $white;
+        }
+    }
+    footer i{
+            color: nth($color,2);
+        }
+    }
+}
+
+
+[class*="overlay-"]{
+    &:after{
+        @include absolute(top left ,0 0);
+        content: '';
+        @include square(100%);
+        background-image: url('#{$img}overlay.png');
+    }
+}
+
+@each $color in $overlay-colors{
+    .overlay-#{nth($color,1)}{
+        &:after{
+            background-color: rgba(nth($color,2) , .5 ) !important;
+        }
+    }
+}
+
+
+
+.video-js[class*="video-skin"]{
+    background-color: transparent;
+    box-shadow: 2px 2px 5px 1px rgba($black,.5);
+    .vjs-poster{
+        background-color: transparent;
+        background-size: 100% auto;
+    }   
+    .vjs-big-play-button{
+        font-size: 3em;
+        line-height:60px;
+        @include square(60px);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        border: 0;
+        
+        margin: -30px 0 0 -30px;
+        border-radius : 50%;
+        outline: none !important;
+        box-shadow: 0 ;
+    }
+}
+
+@each $skin in $overlay-colors{
+    .video-js.video-skin-#{nth( $skin , 1 )}{
+        .vjs-control-bar{
+            background-color:rgba(darken(nth($skin,2) ,15%),.6);
+        }
+        .vjs-big-play-button{
+            background-color:rgba(nth($skin,2),.4); 
+            &:active{
+                box-shadow: 0 0 0 10px rgba(nth($skin,2),.2);
+            }
+            &:focus, &:hover{ 
+                background-color:rgba(nth($skin,2),.9); 
+            }
+        }
+        &:hover{
+            .vjs-big-play-button{
+                background-color:rgba(nth($skin,2),.9);
+            }
+        }
+    }
+
+}
+
+ 
+
+//item-violet
+
+.end-section-bar{
+    padding: 10px 0;
+    background:$gray ;
+    text-align: center;
+    a{
+        padding: 6px 35px;
+    }
 }

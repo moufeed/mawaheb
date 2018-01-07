@@ -1,0 +1,99 @@
+
+<section class="section-news section-b row no-gutters " data-cate-text="فنون" data-cate-right>
+   {{#each section_b}}
+           {{#switch type}}
+                {{#case "full"}}
+                <div class=" item-fullwidth row no-gutters align-items-end line-red-bottom  ">
+                      <div class="col-md-5 p-0 order-2">
+                        <div class="img-col toleft" >
+                                 <img src="assets/img/news/b{{@index}}.jpg" alt="" class="img-fluid">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-5 offset-md-1 order-1">
+                         <article>
+                             <h3><a href="">{{{title}}}</a></h3>
+                            <p class="prief">{{text}}</p>
+                       
+                         <footer class="d-flex  align-items-center">
+                                <span class="writer-img d-none d-md-block">
+                                    <img src="assets/img/avaters/2.png" alt="">
+                                </span>
+                                <span class="ml-auto"> 
+                                    <p><i class="fa fa-user-o"></i> {{writer}}</p>
+                                    <p><i class="fa fa-clock-o"></i> {{date}}</p>
+                                
+                                </span>
+                                <a href="#" class="btn btn-outline-light ">
+                                    {{../read_more}}
+                                </a>
+                         </footer>
+                        </article>
+                    </div>
+                   
+                </div>
+                   
+                {{/case}} 
+                {{#case "bg-img"}}
+                     <div class="col-lg-3 col-md-6">
+            <article class="item-bg {{class}} d-flex  justify-content-center align-items-center flex-column  " 
+                style="background-image:url('assets/img/news/b{{@index}}.jpg')">
+                <div class="content text-center">
+
+                    <span class="date"> <i class="fa fa-clock-o"></i> {{date}}</span>
+                            <h4 class="title"><a href="">{{title}}</a></h4>
+                            <small class="writer"> <i class="fa fa-user-o"></i> {{writer}}</small>
+                </div>
+            </article> 
+        </div>
+                {{/case}}
+                {{#default}}
+                    <div class="col-lg-3 col-md-6">
+                        <article  class="item-normal item-red ">
+                                <a href="#" class="img">
+                                    <img src="assets/img/news/b{{@index}}.jpg" alt="">
+                                </a>
+                            <div class="info">
+                                <small class="date">{{date}}</small>
+                                 <h5><a href="">{{title}}</a></h5>
+                                 <p class="prief">{{text}}</p>
+ 
+            
+                            </div>
+                            {{#if counts}}
+                               <footer  >
+
+
+                                   <div class="top-f">
+                                        <p><i class="fa fa-user-o"></i> {{writer}}</p>
+                                   </div>
+                                   
+                                   <div class="bottom-f d-flex  align-items-center">
+                                        <span class="writer-img d-none d-md-block">
+                                            <img src="assets/img/avaters/2.png" alt="">
+                                        </span>
+                                        <span class="ml-auto"> 
+                                            <span class="icon">
+                                                <i class="fa fa-eye"></i>
+                                                {{random 280 500}}
+                                            </span>
+                                             <span class="icon">
+                                                <i class="fa fa-comments"></i>
+                                                {{random 100 400}}
+                                            </span>
+                                        </span>
+                                        <a href="#"  >
+                                        <i class="fa fa-share-alt"></i>
+                                        </a>
+                                   </div>
+                               
+                               
+                         </footer>
+                         {{/if}}
+                        </article>
+                    </div>
+                {{/default}}    
+            {{/switch}}
+   {{/each}}
+
+</section>  

@@ -2,6 +2,16 @@
 
 .sociallist{
     margin: 0 15px;
+    @include media-breakpoint-down(sm){
+        text-align: center;
+       a{
+           i{
+            @include square(35px);
+            line-height: 35px;
+            
+           }
+       } 
+    }
     a{
         color:$white;
         display: inline-block;
@@ -10,6 +20,7 @@
             @include square(40px);
             text-align: center;
             transition: all .3s;
+             
         }
         
         &:hover{
