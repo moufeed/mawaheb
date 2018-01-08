@@ -7,7 +7,7 @@ var wow = new WOW({
 
 }); 
 wow.init();
-
+ 
 $(document).ready(function(){
     var offset = 350;
     var duration = 300;
