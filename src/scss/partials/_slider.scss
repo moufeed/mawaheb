@@ -1,0 +1,50 @@
+
+.slidertabs {
+    .tp-tab{
+        &:hover{
+            .tp-tab-content{
+                background:darken($white,5%);
+            }
+
+        }
+        &.selected{
+            .tp-tab-content{
+                background:$green;
+              
+            }
+            .tp-tab-date , .tp-tab-title {
+                color: $white;
+            }
+        }
+    }
+    .tp-tab-content {
+        background: $white;
+        position: relative;
+        padding: 15px;
+        left: 0;
+        overflow: hidden;
+        margin-top: 0;
+        box-sizing: border-box;
+        color:$black;
+        display: inline-block;
+        @include square(100%);
+    }
+    .tp-tab-date {
+        display: block;
+        color:darken($gray ,10%);
+        font-size: 11px;
+        margin-bottom: 2px
+    }
+    .tp-tab-title {
+        display: block;
+        text-align: right;
+        color:$black;
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: none;
+        line-height: 17px
+    }
+}
+ 
+ 
+ 

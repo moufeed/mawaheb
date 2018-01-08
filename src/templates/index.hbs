@@ -9,48 +9,14 @@
     <link rel="stylesheet" href="assets/plugins/video-js/video-js.min.css">
     <link rel="stylesheet" href="assets/css/slider.min.css">
     <script src="assets/js/queryloader2.min.js" ></script>
-     <script type="text/javascript">
-        document.documentElement.className = 'js';
-        window.addEventListener('DOMContentLoaded', function() {
-             QueryLoader2(document.querySelector("body"), {
-                 barColor: "#8560A8",
-                 backgroundColor: "#fff",
-                 percentage: true,
-                 barHeight: 2,
-                 minimumTime: 200,
-                 fadeOutTime: 1000
-             });
-         });
-     </script> 
-
+    {{>imgloader}}
 </script>
 </head>
 <body>
       
 <div class="container full-height bg-white bg-shadow p-0">
-   <header class="">
-       <div class="mainnavbar container p-0">
-           <div class="row no-gutters justify-content-between align-items-center bg-dark " >
-           <div class="col-lg-auto col-md-8">
-                {{>navigation}}
-           </div>
-           <div class="col-lg-auto col-md-4">
-               {{>social}}
-           </div> 
-       </div>
-       </div>
-       
-       <div class="row mx-0 justify-content-between align-items-center pt-4 pb-4 px-4">
-           <div class="col-lg-auto logo-col col-md-3">
-               <a href="index.html">
-                   <img src="assets/img/logo.png" alt="logo">
-               </a>
-           </div>
-           <div class="col-lg-auto col-md-9">
-               <img src="assets/img/tmp-728.jpg" class="img-fluid" alt="">
-           </div>
-       </div>
-   </header> 
+   
+   {{>header }}
 
     {{>slider}}
    {{>section-a}}
@@ -67,23 +33,8 @@
 
 
 </div> 
+ {{>searchbox}}
  
-<div class="search-box">
-        <button id="btn-search-close" class="btn btn-outline-light btn--search-close" aria-label="Close search form">
-            <i class="fa fa-times"></i>
-        </button>
-        <form class="search__form" action="">
-            <input class="search__input " name="search" type="search" 
-            placeholder="ادخل كلمة البحث" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
-            <div class="search--btn">
-                <button type="submit" >
-                         بحث
-                </button>
-            </div>
-        </form> 
-				 
-</div><!-- /search -->
-
 <script src="assets/js/script.min.js"></script>
 <script src="assets/js/slider.min.js"></script>
 <script src="assets/plugins/video-js/video.min.js"></script>
