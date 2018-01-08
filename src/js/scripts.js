@@ -9,6 +9,22 @@ var wow = new WOW({
 wow.init();
  
 $(document).ready(function(){
+    $('[data-toggle="popover"]').popover(); 
+
+
+    $(document).on('click','.btn-share',function(event){
+        event.preventDefault();
+        var width      = 650,
+            height     = 450,
+            windowSRC  = $(this).attr('href'),
+            windowTitle =$(this).parent('span').data('title');
+        window.open(
+           windowSRC,windowTitle,
+          'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,width='+width+',height='+height+',top='+(screen.height/2-height/2)+',left='+(screen.width/2-width/2)
+        );
+    });
+
+    //-------------------------------------------------------------
     var offset = 350;
     var duration = 300;
 

@@ -92,7 +92,21 @@
                         </span>
                     </span>
                     {{/if}}
-                    <a href="#">
+                    <a    
+                          tabindex="0"
+                          data-container="body" 
+                          data-toggle="popover" 
+                          data-placement="top" 
+                          data-html ="true"
+                          data-trigger="focus"
+                          class="sharebtn"
+                          data-content='
+                                 <span data-title="مشاركة على">
+                                                    <a class="btn-share" href="https://www.facebook.com/sharer/sharer.php?u="><i class="fa fa-facebook"></i></a>
+                                                    <a class="btn-share" href="https://twitter.com/share?url="><i class="fa fa-twitter"></i></a>
+                                                    <a class="btn-share" href="https://plus.google.com/share?url="><i class="fa fa-google-plus"></i></a>
+                                                 </span>
+                             '>
                         <i class="fa fa-share-alt"></i>
                     </a>
                 </div>

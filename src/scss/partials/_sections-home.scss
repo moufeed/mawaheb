@@ -264,4 +264,27 @@ $_50px: 50px;
 
 
 
+ .sharebtn{
+     cursor: pointer;
+     outline: none !important;
+ }
+ .popover{
+     border-radius: 0;
+ }
+.popover-body{
+    .btn-share{
+        display: inline-flex;
+        width: 25px;
+        padding: 6px;
+        color:darken($gray,15%);
+         &:hover{
+            text-decoration: none;
+            @each $i in $social-colors{
+                [class*="fa-#{nth($i,1)}"]{
+                    color:  nth($i,2);
+                }
+            }
+         }
+    }  
+}
  
