@@ -17,6 +17,9 @@ h4,h5,h6{
 .bg-white{
     background: $white;
 }
+.bg-light-purple{
+    background-color:$grayish_purple;
+}
 .en{
     direction: ltr;
     font-family:$font-family-sans-serif;
@@ -201,4 +204,51 @@ h4,h5,h6{
     position: fixed;
     width: 100%;
     z-index: 150000;
+}
+
+
+
+
+
+.page-header {
+    background-position: center;
+    background-size: cover;
+    height: 230px;
+    position: relative;
+    &:after{
+        @include absolute(top  left , 0 0);
+        content: '';
+        @include square(100% );
+        background: rgba($dark_purple ,.7) url('#{$img}overlay.png');
+        z-index: 0;
+         
+    }
+    .col{
+        z-index: 1;
+    }
+    h2{
+        color:$white;
+        font-family: 'g-bold';
+        margin-bottom: 25px;
+    }
+    .breadcrumb{
+        display: inline-flex;
+        background-color: rgba( $dark_grayishnavy,.2);
+        border-radius: 0;
+        a{
+            color: $white;
+        }
+        .breadcrumb-item.active{
+            color: $light_green;
+        }
+    }
+}
+ 
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: $grayish_purple;
+    outline: none;
+    -webkit-box-shadow: 0 0 0 0.2rem rgba($grayish_purple,0.25);
+    box-shadow: 0 0 0 0.2rem rgba($grayish_purple,0.25);
 }

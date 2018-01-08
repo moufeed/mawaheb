@@ -1,6 +1,5 @@
  $(document).ready(function () {
      $('#main_slider').show().revolution({
-         
          sliderLayout: 'auto',
          delay: 9000,
          gridwidth: 1170,
