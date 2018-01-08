@@ -155,6 +155,7 @@ var slider= {
     src: [
         './src/js/jquery.themepunch.tools.min.js',
         './src/js/jquery.themepunch.revolution.min.js',
+       
         './src/js/slider.js'
     ],
     dist: "./dist/assets/js",
@@ -163,8 +164,8 @@ var slider= {
 
 gulp.task('slider', function () {
     browserSync.notify("please wait");
-    return gulp.src(config.slider.src)
-        .pipe(concat(config.slider.file))
+    return gulp.src( slider.src)
+        .pipe(concat(slider.file))
         .pipe(uglify({
             mangle: false
         }))
@@ -177,7 +178,7 @@ gulp.task('slider', function () {
         .pipe(header(config.header, {
             pkg: pkg
         }))
-        .pipe(gulp.dest(config.slider.dist));
+        .pipe(gulp.dest(slider.dist));
 
 })
 

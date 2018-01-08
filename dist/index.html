@@ -7,7 +7,22 @@
     <title>الرئيسية</title>
     <link rel="stylesheet" href="assets/css/style-rtl.min.css">
     <link rel="stylesheet" href="assets/plugins/video-js/video-js.min.css">
-    <script>document.documentElement.className = 'js';</script>
+    <link rel="stylesheet" href="assets/css/slider.min.css">
+    <script src="assets/js/queryloader2.min.js" ></script>
+     <script type="text/javascript">
+        document.documentElement.className = 'js';
+        window.addEventListener('DOMContentLoaded', function() {
+             QueryLoader2(document.querySelector("body"), {
+                 barColor: "#8560A8",
+                 backgroundColor: "#fff",
+                 percentage: true,
+                 barHeight: 2,
+                 minimumTime: 200,
+                 fadeOutTime: 1000
+             });
+         });
+     </script> 
+
 </script>
 </head>
 <body>
@@ -89,7 +104,30 @@
        </div>
    </header> 
 
-   <section class="section-news section-a row no-gutters " data-cate-text="منوعات" data-cate-left>
+    <section class="row no-gutters">
+        <div class="col">
+            <div class="rev_slider_wrapper">
+                    <div id="main_slider" class="rev_slider" data-version="5.4.5" style="display:none">
+                        <ul>
+                            <li data-transition="random"
+                            data-title="Slide Title" 
+                             data-param1="Additional Text" >
+                                <img src="assets/img/slider/1.jpg" alt="" class="rev-slidebg">
+                            </li> 
+                            <li data-transition="fade" 
+                            data-title="Slide Title" 
+        data-param1="Additional Text" >
+                                <img src="assets/img/slider/2.jpg" alt="" class="rev-slidebg">
+                            </li> 
+                        </ul>
+                
+                    </div>
+                
+                </div>
+        </div>
+    
+    
+    </section>   <section class="section-news section-a row no-gutters " data-cate-text="منوعات" data-cate-left>
          
        <div class=" item-fullwidth row no-gutters align-items-end line-violet-bottom item-violet">
            <div class="col-md-5 p-0">
@@ -145,11 +183,11 @@
                        <span class="ml-auto">
                            <span class="icon">
                                <i class="fa fa-eye"></i>
-                               475
+                               341
                            </span>
                            <span class="icon">
                                <i class="fa fa-comments"></i>
-                               399
+                               384
                            </span>
                        </span>
                        <a href="#">
@@ -183,11 +221,11 @@
                        <span class="ml-auto">
                            <span class="icon">
                                <i class="fa fa-eye"></i>
-                               451
+                               327
                            </span>
                            <span class="icon">
                                <i class="fa fa-comments"></i>
-                               115
+                               314
                            </span>
                        </span>
                        <a href="#">
@@ -258,11 +296,11 @@
                        <span class="ml-auto">
                            <span class="icon">
                                <i class="fa fa-eye"></i>
-                               363
+                               406
                            </span>
                            <span class="icon">
                                <i class="fa fa-comments"></i>
-                               363
+                               171
                            </span>
                        </span>
                        <a href="#">
@@ -296,11 +334,11 @@
                        <span class="ml-auto">
                            <span class="icon">
                                <i class="fa fa-eye"></i>
-                               318
+                               290
                            </span>
                            <span class="icon">
                                <i class="fa fa-comments"></i>
-                               362
+                               117
                            </span>
                        </span>
                        <a href="#">
@@ -371,11 +409,11 @@
                                            <span class="ml-auto"> 
                                                <span class="icon">
                                                    <i class="fa fa-eye"></i>
-                                                   416
+                                                   327
                                                </span>
                                                 <span class="icon">
                                                    <i class="fa fa-comments"></i>
-                                                   295
+                                                   379
                                                </span>
                                            </span>
                                            <a href="#"  >
@@ -413,11 +451,11 @@
                                            <span class="ml-auto"> 
                                                <span class="icon">
                                                    <i class="fa fa-eye"></i>
-                                                   478
+                                                   392
                                                </span>
                                                 <span class="icon">
                                                    <i class="fa fa-comments"></i>
-                                                   297
+                                                   189
                                                </span>
                                            </span>
                                            <a href="#"  >
@@ -455,11 +493,11 @@
                                            <span class="ml-auto"> 
                                                <span class="icon">
                                                    <i class="fa fa-eye"></i>
-                                                   388
+                                                   336
                                                </span>
                                                 <span class="icon">
                                                    <i class="fa fa-comments"></i>
-                                                   193
+                                                   178
                                                </span>
                                            </span>
                                            <a href="#"  >
@@ -640,6 +678,7 @@
 </div><!-- /search -->
 
 <script src="assets/js/script.min.js"></script>
+<script src="assets/js/slider.min.js"></script>
 <script src="assets/plugins/video-js/video.min.js"></script>
 </body> 
 </html>  
