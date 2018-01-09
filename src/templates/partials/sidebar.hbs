@@ -1,27 +1,38 @@
-<div class="d-flex flex-column align-items-end">
+<div class="">
     <img src="assets/img/b300.jpg" alt="" class="img-fluid">
     <div class="most-popular">
-        <h4>
+        <h4 class="title-border">
             <strong>الاكثر مشاهدة</strong>
         </h4>
         <ul>
             {{#each section_b}}
-            <li>
-                <a href="">
+            <li class="clearfix  animate fadeInDown" data-wow-duration="500ms" data-wow-delay="{{@index}}00ms">
+                <a href="" class="img">
                     <img src="assets/img/news/b{{@index}}.jpg" alt="">
                 </a>
-                <div>
+                <div class="info">
                     <div class="meta">
                         <span><i class="fa fa-clock-o"></i>{{date}}</span>
                         <span><i class="fa fa-eye"></i>{{random 280 500}}</span>
                         <span><i class="fa fa-comments"></i>{{random 100 400}}</span>
                     </div>
                     <a href="" class="title">
-                        {{title}}
+                        {{{title}}}
                     </a>
                 </div>
             </li>
             {{/each}}
         </ul>
+    </div>
+    <div class="latest_posts">
+         <h4 class="title-border">
+            <strong>أحدث المقالات</strong>
+        </h4>
+            {{#each latest_posts}}
+            <div class="post animate fadeInDown" data-wow-duration="500ms" data-wow-delay="{{@index}}00ms">
+                <img src="assets/img/news/{{img}}" alt=""/> 
+                <a href="#">{{title}}</a>			
+            </div> 
+            {{/each}}
     </div>
 </div>  

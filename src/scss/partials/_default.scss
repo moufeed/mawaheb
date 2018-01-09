@@ -312,3 +312,13 @@ h4,h5,h6{
         }
     }
 }
+
+.title-border{
+    border-bottom: 1px dotted lighten($gray ,5%);
+    strong{
+        display: inline-block;
+        padding:5px 10px; 
+        border-bottom: 2px solid $grayish_purple;
+        margin-bottom: -1px;
+    }
+}

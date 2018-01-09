@@ -1,27 +1,116 @@
 
+.most-popular{
+    h4{
+        margin: 25px 0;
+    }
+    ul{
+        list-style: none;
+        padding: 0;
+        li{
+            margin-bottom: 10px;
+            .img{
+                @include square(75px);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+                float: right;
+                margin-left: 5px;
+                img{
+                    height: 100%;
+                    width: 100%;
+                }
+            
+            }
+            .info{
+                float: right;
+                width: calc(100% - 90px);
+                margin-right: 5px;
+            }
+            .meta{
+                font-size: 13px;
+                color: lighten($black ,35%);
+                span{
+                    margin: 0 4px;
+                }
+                i{
+                    margin-left: 4px;
+                }
+            }
+            .title{
+                display: block;
+                width: 90%;
+                color: $black;
+            }
+            &:hover{
+                .title{
+                    color: $dark_purple;
+                }
+            }
+            @include media-breakpoint-down(md){
+                .img{
+                    width: 100%;
+                    height: auto;
+                }
+                .info{
+                    width: 100%;
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+}
+ 
+.latest_posts{
+    h4{
+        margin-bottom: 25px;
+    }
+    .post{
+        height: 125px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+        position: relative;
+        margin-left: 15px;
+        img{
+            position: absolute;
+            transition: all .3s;
+            width: 100%;
+        }
+         a{
+             position: relative;
+             z-index: 1;
+             background: $white;
+             color: $black;
+             padding: 5px 10px;
+             width: 90%;
+             display: block;
+             align-self: flex-end;
+             transition: all .3s;
+         }
+         &:hover{
+             img{
+                 transform: scale(1.2)  translateY(5px);
+             }
+            a{
+                transform: translateY(-15px);
+                text-decoration: none;
+                color: $dull_red;
+            }
+         }
+         @include media-breakpoint-down(md){
+            margin-left: 5px;
+            margin-right: 5px;
+            height: 150px;
+         }
+    }
+}
 
 /*
-<div class="most-popular">
-        <h4> 
-            <strong>الاكثر مشاهدة</strong>
-        </h4>
-        <ul>
-            {{#each section_b}}
-            <li>
-                <a href="">
-                    <img src="assets/img/news/b{{@index}}.jpg" alt="">
-                </a>
-                <div>
-                    <div class="meta">
-                        <span><i class="fa fa-clock-o"></i>{{date}}</span>
-                        <span><i class="fa fa-eye"></i>{{random 280 500}}</span>
-                        <span><i class="fa fa-comments"></i>{{random 100 400}}</span>
-                    </div>
-                    <a href="" class="title">
-                        {{title}}
-                    </a>
-                </div>
-            </li>
-            {{/each}}
-        </ul>
+ <div class="post">
+                <img src="assets/img/news/{{img}}" alt=""/> 
+                <a href="#">{{title}}</a>			
+            </div> 
 */

@@ -36,11 +36,18 @@
     }
     .post-info{
         padding: 0 15px;
+        @include media-breakpoint-down(md){
+            margin-bottom: 25px;
+        }
     }
      .post-content{
         @include ellipsis(14px,1.4,4);
         color: darken($gray,5%);
         width: 90%;
+        @include media-breakpoint-down(md){
+            height: auto;
+            overflow: unset;
+        }
      }
      
      .post-meta{
