@@ -1,0 +1,27 @@
+
+
+/*
+<div class="most-popular">
+        <h4> 
+            <strong>الاكثر مشاهدة</strong>
+        </h4>
+        <ul>
+            {{#each section_b}}
+            <li>
+                <a href="">
+                    <img src="assets/img/news/b{{@index}}.jpg" alt="">
+                </a>
+                <div>
+                    <div class="meta">
+                        <span><i class="fa fa-clock-o"></i>{{date}}</span>
+                        <span><i class="fa fa-eye"></i>{{random 280 500}}</span>
+                        <span><i class="fa fa-comments"></i>{{random 100 400}}</span>
+                    </div>
+                    <a href="" class="title">
+                        {{title}}
+                    </a>
+                </div>
+            </li>
+            {{/each}}
+        </ul>
+*/

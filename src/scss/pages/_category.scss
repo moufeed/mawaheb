@@ -1,0 +1,114 @@
+
+
+// .section-news{}
+
+
+.listing-news{
+    
+    .post-image a{
+         overflow: hidden;
+         height:250px;
+         background-color:lighten($gray,30%);
+         position: relative;
+        
+         img{ 
+             min-width: 100%;
+         }
+         &:after{
+            content: '';
+            @include absolute (top left , 0 0);
+            width: 100%;
+            height:100%;
+            opacity: 0;
+            transform: translate3d(-50%,0,0);
+            transition: opacity 0.35s, transform 0.35s;
+            background: linear-gradient(to left, rgba($dark_purple,0) 0%, rgba($dark_purple,0.8) 75%);
+            
+         }
+         @include media-breakpoint-down(md){
+            height:300px;
+            &:after{
+                transform: translate3d(0,50%,0);
+                background: linear-gradient(to bottom, rgba($dark_purple,0) 0%, rgba($dark_purple,0.8) 75%);
+            }
+         }
+
+    }
+    .post-info{
+        padding: 0 15px;
+    }
+     .post-content{
+        @include ellipsis(14px,1.4,4);
+        color: darken($gray,5%);
+        width: 90%;
+     }
+     
+     .post-meta{
+        
+         ul{
+             padding: 0;
+             margin: 0;
+             li{
+                 margin: 0 5px;
+                 font-size: 12px;
+                 color: lighten($black ,15%);
+             }
+             i{
+                margin-left: 5px;
+             }
+         }
+     }
+     .post-title{
+         margin-top: 5px;
+         font-size: 1.2rem;
+         a{
+            color: $black;
+            transition: all .3s;
+         }
+     }
+     @include media-breakpoint-down(sm){
+        .post-content{
+            width:100%; 
+        }
+        
+        .post-meta{
+            margin-top: 25px;
+        }
+     } // media-breakpoint-down(sm) ;
+     .post-item{
+        border-top: 1px solid #e8e8e8; 
+
+        &.odd{
+             
+            
+            @include media-breakpoint-up(lg){
+                .post-image{
+                    order: 2;
+                    a:after{
+                        transform: translate3d(50%,0,0);
+                        background: linear-gradient(to right, rgba($dark_purple,0) 0%, rgba($dark_purple,0.8) 75%);
+                     }
+                }
+                .post-info{
+                    order: 1;
+                }
+            }
+
+        }
+        &.odd-bg{
+    
+            background: linear-gradient(to right, rgba( darken($white ,4%),0) 0%, darken($white ,4%) 50%);
+        }
+
+        &:hover{
+            .post-title a{
+                color: darken($soft_purple ,15%);
+            }
+            .post-image a:after{
+                   opacity: 1;
+                   transform: translate3d(0,0,0);
+                }
+        }
+    }
+}
+ 

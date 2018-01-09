@@ -8,6 +8,8 @@ var wow = new WOW({
 }); 
 wow.init();
  
+
+
 $(document).ready(function(){
     $('[data-toggle="popover"]').popover(); 
 

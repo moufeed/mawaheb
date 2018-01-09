@@ -25,6 +25,13 @@ h4,h5,h6{
     font-family:$font-family-sans-serif;
    
 }
+.no-shadow{
+    box-shadow: none !important;
+}
+.p15{
+    padding-left: 15px;
+    padding-right: 15px;
+}
 [data-cate-text]{
     position: relative;
     &:before{
@@ -251,4 +258,57 @@ h4,h5,h6{
     outline: none;
     -webkit-box-shadow: 0 0 0 0.2rem rgba($grayish_purple,0.25);
     box-shadow: 0 0 0 0.2rem rgba($grayish_purple,0.25);
+}
+
+.navigation{
+    background: $gray;
+    padding: 10px 0;
+    ul{
+        margin-bottom: 0;
+    }
+    .page-item{
+        .page-link{
+            color: $black;
+            font-family: $font-family-sans-serif;
+            background-color: transparent;
+            border: 0;
+            font-weight: bold;
+            &:hover{
+                background-color: $white;
+            }
+        }
+        &:first-child , &:last-child{
+            .page-link{
+                border-radius :  0 !important;  
+                
+            }
+        }
+        &.active{
+            .page-link{
+                color:$white;
+                background-color:$dark_purple;
+                border-color: $dark_purple;
+            }
+        }
+    }
+    
+}
+
+.sharebar{
+
+    a{
+        color: $gray;
+        padding: 8px;
+        i{
+            transition: all .3s;
+        }
+        &:hover{
+            text-decoration: none;
+            @each $i in $social-colors{
+                [class*="fa-#{nth($i,1)}"]{
+                    color:  nth($i,2);
+                }
+            }
+        }
+    }
 }

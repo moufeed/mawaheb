@@ -60,25 +60,27 @@ $fa-font-path:        "../fonts/fa" ;
 
 
 
-@import '../../node_modules/bootstrap/scss/bootstrap.scss';
-@import '../../node_modules/font-awesome/scss/font-awesome.scss';
-@import 'mixins/config';
+@import
+'../../node_modules/bootstrap/scss/bootstrap.scss',
+'../../node_modules/font-awesome/scss/font-awesome.scss';
+
 @import 
-    'lib/animate',
-    'lib/fonts'
-;
-
-
-@import "lib/bootstrap-4-rtl"; 
- 
-@import "partials/default",
-        "partials/header",
-        "partials/search",
-        "partials/slider", 
-        "partials/navigation",
-        "partials/sections-home",
-        "partials/social-section",
-        "partials/footer"
-;
-@import "pages/contactus"
+'mixins/config'             ,
+//lib
+'lib/animate'               ,
+'lib/fonts'                 ,
+"lib/bootstrap-4-rtl"       ,
+// partials
+"partials/default"          ,
+"partials/header"           ,
+"partials/search"           ,
+"partials/slider"           ,             
+"partials/navigation"       ,
+"partials/sections-home"    ,
+"partials/social-section"   ,
+"partials/footer"           ,
+"partials/sidebar"          ,
+// pages                 
+"pages/contactus"           ,
+"pages/category"            
 ;

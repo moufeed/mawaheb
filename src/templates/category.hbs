@@ -1,0 +1,106 @@
+  <!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{home}}</title>
+    <link rel="stylesheet" href="assets/css/style-{{dir}}.min.css">
+    <link rel="stylesheet" href="assets/plugins/video-js/video-js.min.css">
+    <link rel="stylesheet" href="assets/css/slider.min.css">
+    <script src="assets/js/queryloader2.min.js" ></script>
+    {{>imgloader}}
+</script>
+</head>
+<body>
+      
+<div class="container full-height bg-white bg-shadow p-0">
+{{>header }}
+ 
+  <section class="page-header row no-gutters" style="background-image:url('assets/img/bg1.jpg')">
+         <div class="col p-4">
+             <h2>عنوان الصفحة</h2>
+             <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">الرئيسية</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">عنوان الصفحة</li>
+                </ol>
+            </nav>
+         </div>
+</section>
+    
+
+<script>
+         var fixDim = (img)=>{ 
+            if(img.naturalWidth  > img.naturalHeight ){
+                 img.setAttribute('height','100%');
+            }
+             if(img.naturalWidth  <= img.naturalHeight ){
+                 img.setAttribute('width','100%');
+            }
+        }  
+</script>
+<section class="section-news  ">
+    <div class="row no-gutters justify-content-between">
+        <div class="col-md-8 listing-news">  
+            <!-- try add odd-bg to  post-item -->
+            {{#each section_a}}
+                                                    
+                <div class="row no-gutters align-items-center  post-item animate fadeInUp" data-wow-duration="500ms" data-wow-delay="1{{@index}}0ms" >
+                    <div class="  col-lg-6 post-image">
+                         {{#if video}}
+                             <video id="videoplaye" class="video-js vjs-fluid video-skin-purple no-shadow" controls preload="auto"  
+                                    poster="assets/img/news/{{@index}}.jpg" data-setup="">
+                                    <source src="assets/videos/1.mp4" type='video/mp4'>
+                                    <source src="assets/videos/1.webm" type='video/webm'>
+                                    <p class="vjs-no-js">
+                                    To view this video please enable JavaScript, and consider upgrading to a web browser that
+                                    <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                                </p>
+                            </video>
+                        {{else}}
+
+                        <a href="" class=" d-flex justify-content-center align-items-center">
+                            <img src="assets/img/news/{{@index}}.jpg" alt="{{title}}" onload="fixDim(this)">
+                        </a>
+                        {{/if}}
+                    </div> 
+                    <div class=" col-lg-6 post-info">
+                       <div class="post-meta">
+                            <ul class=" list-inline">
+                            <li class="list-inline-item  " ><i class="fa fa-clock-o"></i>{{date}}</li>
+                            <li class="list-inline-item  " ><i class="fa fa-eye"></i>{{random 280 500}}</li>
+                            <li class="list-inline-item  " ><i class="fa fa-comments"></i>{{random 100 400}}</li>
+                         </ul>
+                       </div>
+                        <h4 class="post-title"><a href="">{{title}}</a></h4>
+                        <p class="post-content">{{text}}</p>
+                         <span data-title="مشاركة على" class="sharebar">
+                            <a class="btn-share" href="https://www.facebook.com/sharer/sharer.php?u="><i class="fa fa-facebook"></i></a>
+                            <a class="btn-share" href="https://twitter.com/share?url="><i class="fa fa-twitter"></i></a>
+                            <a class="btn-share" href="https://plus.google.com/share?url="><i class="fa fa-google-plus"></i></a>
+                        </span>
+                    </div> 
+                </div>   
+            {{/each}}
+
+            
+        </div>
+        <aside  class="col-md-4   aside">
+            {{>sidebar}}
+        </aside>
+        {{>pagination}}
+        {{>social-section}}
+    </div>
+    
+</section>
+
+{{>footer}}
+</div>  
+{{>searchbox}}
+ 
+<script src="assets/js/script.min.js"></script>
+<script src="assets/js/slider.min.js"></script>
+<script src="assets/plugins/video-js/video.min.js"></script>
+</body> 
+</html>  

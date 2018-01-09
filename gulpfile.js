@@ -72,7 +72,8 @@ var config = {
                 },
                 random : function (min,max){
                     return Math.floor(Math.random() * (max - min + 1)) + min;
-                }
+                },
+                
             }
         }
     }
@@ -278,3 +279,20 @@ handlebars.Handlebars.registerHelper( "default", function( options ) {
         return options.fn( this );
     }
 } );
+
+handlebars.Handlebars.registerHelper( "even", function( number, options ) {
+    if((number % 2) == 0) {
+        return options.fn(this);
+      } else {
+        return options.inverse(this);
+    }
+})
+
+handlebars.Handlebars.registerHelper( "odd", function( number, options ) {
+    if((number % 2) != 0) {
+        return options.fn(this);
+      } else {
+        return options.inverse(this);
+    }
+})
+

@@ -20,11 +20,13 @@
             @include square(40px);
             text-align: center;
             transition: all .3s;
-             @include media-breakpoint-only(md) {
-                 width: 30px;
-             }
+             
         }
-        
+        @include media-breakpoint-only(md) {
+            &:not(#btn-search){
+                display: none;
+            }
+        }
         &:hover{
             text-decoration: none;
             i{
