@@ -33,7 +33,29 @@
                 background: $grayish_purple;
                 color: $white;
             }
+            &.active, &:active{
+                background-color:$light_green;
+                color: $black;
+            }
         }
     }
   }
 }
+
+.dropdown-submenu {
+    position: relative;
+  }
+  
+  .dropdown-submenu a::after {
+    transform: rotate(90deg);
+    position: absolute;
+    left: 6px;
+    top: .8em;
+  }
+  
+  .dropdown-submenu .dropdown-menu {
+    top: 0;
+    right: 96%;
+    margin-left: .1rem;
+    margin-right: .1rem;
+  }

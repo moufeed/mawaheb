@@ -95,7 +95,7 @@
     "text":"دبي تمد عرض 'فوتو كوبي'  لمدة أسبوع",
     "type":"bg-img",
     "class":"overlay-black",
-    "video":false,
+    "video":false, 
     "writer":"مصطفى حمزة",
     "counts" :false
 }  

@@ -28,13 +28,83 @@
             </nav>
          </div>
 </section>
-    
-<section>
-     <header class="pt-3 pb-3 p15 results-count">
-            <p>تم العثور على <span class="en badge badge-pill badge-info m-1">{{random 500 1500}}</span> نتيجة</p>
-     </header>
-</section>
+     
+<section class="results-section">
+    <div class="row no-gutters justify-content-between">
+          <div class="col-md-8 ">
+               <header class=" results-count">
+                    <p>تم العثور على <span class="en badge badge-pill badge-info m-1">{{random 50 500}}</span> نتيجة</p>
+               </header>
+                <div class="alert alert-secondary my-4 mx-3 rounded-0"  role="alert">
+                    <h4 class="alert-heading"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> عذراً على الازعاج،</h4>
+                    <hr>
+                    <p>لم يتم العثور على نتائج مطابقة. حاول البحث مجددا رجاءاً</p>
+                </div>
+               <div class="listing-results row p15">
+                   {{#each section_a}}
+                            <div class="col-lg-6 res-item animate fadeInUp" data-wow-duration="500ms" data-wow-delay="1{{@index}}0ms" >
+                            
+                        {{#if video}}
+                             <video id="videoplaye" class="video-js vjs-fluid video-skin-red no-shadow" controls preload="auto"  
+                                    poster="assets/img/news/{{@index}}.jpg" data-setup="">
+                                    <source src="assets/videos/1.mp4" type='video/mp4'>
+                                    <source src="assets/videos/1.webm" type='video/webm'>
+                                    <p class="vjs-no-js">
+                                    To view this video please enable JavaScript, and consider upgrading to a web browser that
+                                    <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                                </p>
+                            </video>
+                        {{else}}
 
+                        <a href="" class="img d-flex justify-content-center align-content-center flex-column">
+                                <img src="assets/img/news/b{{@index}}.jpg" alt="">
+                        </a>
+                        {{/if}}
+
+
+
+                                <div class="info">
+                                <div class="meta">
+                                    <span><i class="fa fa-clock-o"></i>{{date}}</span>
+                                    <span><i class="fa fa-eye"></i>{{random 280 500}}</span>
+                                    <span><i class="fa fa-comments"></i>{{random 100 400}}</span>
+                                </div>
+                                    <h5><a href="">{{{title}}}</a></h5>
+                                    <p class="preif">{{text}}</p>
+                                    <div class="meta-footer d-flex justify-content-between">
+                                        <span><i class="fa fa-user"></i>{{writer}}</span>
+                                        <a    
+                                            tabindex="0"
+                                            data-container="body" 
+                                            data-toggle="popover" 
+                                            data-placement="top" 
+                                            data-html ="true"
+                                            data-trigger="focus"
+                                            class="sharebtn"
+                                            data-content='
+                                 <span data-title="مشاركة على">
+                                                    <a class="btn-share" href="https://www.facebook.com/sharer/sharer.php?u="><i class="fa fa-facebook"></i></a>
+                                                    <a class="btn-share" href="https://twitter.com/share?url="><i class="fa fa-twitter"></i></a>
+                                                    <a class="btn-share" href="https://plus.google.com/share?url="><i class="fa fa-google-plus"></i></a>
+                                                 </span>
+                             '>
+                        <i class="fa fa-share-alt"></i>
+                    </a>
+                                    </div>
+                                </div>
+                            </div>
+                   {{/each}}
+
+               </div>
+          </div>
+          <aside  class="col-md-4   aside">
+            {{>sidebar}}
+        </aside>
+    </div>
+     {{>pagination}}
+   
+</section>
+ {{>social-section}}
 {{>footer}}
 </div> 
 {{>searchbox}}
