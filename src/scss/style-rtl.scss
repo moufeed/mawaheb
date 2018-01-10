@@ -56,7 +56,7 @@ $overlay-colors:(
     "instagram" : #cd486b '\f16d'
  );
 // fontawesome  
-$fa-font-path:        "../fonts/fa" ; 
+$fa-font-path:        "../fonts/fa" ;  
 
 
 
@@ -66,9 +66,11 @@ $fa-font-path:        "../fonts/fa" ;
 
 @import 
 'mixins/config'             ,
-//lib
+//lib 
 'lib/animate'               ,
 'lib/fonts'                 ,
+"lib/jquery.fancybox.min"  ,
+"lib/owl.carousel"          ,
 "lib/bootstrap-4-rtl"       ,
 // partials
 "partials/default"          ,
@@ -80,9 +82,11 @@ $fa-font-path:        "../fonts/fa" ;
 "partials/social-section"   ,
 "partials/footer"           ,
 "partials/sidebar"          ,
-// pages                 
+// pages                  
 "pages/contactus"           ,
 "pages/category"            ,
 "pages/results"             ,
-"pages/sections"             
+"pages/sections"            ,
+"pages/post"            
 ;
+

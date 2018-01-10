@@ -215,10 +215,12 @@ h4,h5,h6{
 .fixed-top{
     position: fixed;
     width: 100%;
-    z-index: 150000;
+    z-index: 15000;
 }
 
-
+.border-bottom{
+    border-bottom:1px  solid lighten($gray , 15%);
+}
 
 
 

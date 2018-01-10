@@ -99,6 +99,25 @@ $(document).ready(function(){
       
         return false;
       });
-});  
+
+
+      $('.increasefont').on('click', function(e){
+        var currentsize = parseInt($("#postContent").css('font-size'));
+		if(currentsize < 24){ 
+		currentsize++;
+		$("#postContent").css({'font-size':currentsize+'px'});
+		 
+		}
+	});
+
+	$('.decreasefont').on('click', function(e){
+        var currentsize = parseInt($("#postContent").css('font-size'));
+		if(currentsize > 14){
+		currentsize--;
+		$("#postContent").css({'font-size':currentsize+'px'});
+		}
+    });
+    
+});   
 
  

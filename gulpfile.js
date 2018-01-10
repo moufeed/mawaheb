@@ -41,6 +41,7 @@ var config = {
             './node_modules/bootstrap/dist/js/bootstrap.min.js',
             './node_modules/wowjs/dist/wow.min.js',
             './node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
+            './node_modules/owl.carousel/dist/owl.carousel.min.js',
             './src/js/scripts.js'
         ],
         watch: './src/js/scripts.js',

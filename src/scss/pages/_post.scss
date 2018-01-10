@@ -1,0 +1,103 @@
+
+.post-one{
+    .post-title{
+        padding:25px 15px;
+        color: $dark_grayishnavy ;
+          
+    }
+    .post-meta{
+        text-align: center;
+        padding:5% 15px 5px 15px;
+        span{
+            margin-bottom: 15px;
+            border-bottom: 1px dashed $gray;
+            padding-bottom: 15px;
+            &:last-child{
+                border: 0;
+            }
+        }
+        span,strong,i{
+            display: block;
+        }
+        i{
+            font-size: 30px;
+            color:$dark_purple;
+            margin-bottom: 15px;
+        }
+        @include media-breakpoint-down(md){
+            padding:5px;
+            span{
+                margin-bottom: 5px;
+                border-bottom: 1px dashed $gray;
+                padding-bottom: 5px;
+            }
+            i{
+                font-size: 16px;
+               
+                margin-bottom: 5px;
+            }
+        }
+    }
+    
+}
+.fancyimages{
+   
+    padding: 3px 0;
+    
+}
+ .item-fancyimage{
+     margin-bottom:4px ;
+     height: 120px;
+     overflow: hidden;
+     padding: 0;
+     display: block;
+     &:after{
+         @include absolute(top left ,0 );
+         content: '';
+         @include square(100%);
+         transition: all .3s;
+     }
+     img{
+         width:100%; 
+         min-height: 100%;
+         filter: grayscale(1);
+    
+         transition: all .4s;
+     }
+     &:hover{
+        &:after{
+            box-shadow:  0 0 0 15px rgba($white , .2) inset;
+        }
+       img{
+        filter: grayscale(0);
+       }
+     }
+ }
+.owl-nav{
+    .owl-prev, .owl-next{
+        font-family: FontAwesome;
+        font-size: 18px;
+        @include square(35px);
+        background:$bright_purple;
+        
+        position: absolute;
+        top: 33%;
+        text-align: center;
+        line-height: 35px;
+        color: $white;
+        box-shadow: 0 2px 2px -1px rgba($black , .5);
+        &:hover{
+           
+        }
+    }
+    .owl-prev{
+        right: 0;
+    }
+    .owl-next{
+        left: 0;
+    }
+    .disabled{}
+}
+.post-content{
+    letter-spacing: 1px;
+}
