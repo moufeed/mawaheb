@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="assets/plugins/video-js/video-js.min.css">
     <link rel="stylesheet" href="assets/css/slider.min.css">
     <script src="assets/js/queryloader2.min.js" ></script>
-    {{>imgloader}}
+    {{>imgloader}} 
 </script>
 </head>
 <body>
@@ -45,7 +45,9 @@
                             <div class="col-lg-6 res-item animate fadeInUp" data-wow-duration="500ms" data-wow-delay="1{{@index}}0ms" >
                             
                         {{#if video}}
-                             <video id="videoplaye" class="video-js vjs-fluid video-skin-red no-shadow" controls preload="auto"  
+                            <div class="video-box d-flex justify-content-center align-content-center flex-column">
+                                <img src="assets/img/news/{{@index}}.jpg" alt="">
+                                     <video id="videoplaye" class="video-js vjs-fluid video-skin-red no-shadow" controls preload="auto"  
                                     poster="assets/img/news/{{@index}}.jpg" data-setup="">
                                     <source src="assets/videos/1.mp4" type='video/mp4'>
                                     <source src="assets/videos/1.webm" type='video/webm'>
@@ -54,6 +56,7 @@
                                     <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
                                 </p>
                             </video>
+                            </div>
                         {{else}}
 
                         <a href="" class="img d-flex justify-content-center align-content-center flex-column">

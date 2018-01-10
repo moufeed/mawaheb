@@ -14,7 +14,15 @@
 
 .res-item{
     margin-bottom: 20px;
-    .img{
+
+    .video-box{
+           img{
+            position: absolute;
+            z-index: 0;
+            filter: blur(5px);
+           }
+        }
+    .img ,.video-box{
         overflow: hidden;
          height:250px;
          @include media-breakpoint-only(md){
