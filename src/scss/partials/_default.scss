@@ -329,3 +329,38 @@ h4,h5,h6{
         margin-bottom: -1px;
     }
 }
+
+
+.share-bar{
+    border-top: 1px solid #f0f0f0;
+    padding-top: 10px;
+    margin-bottom: 25px;
+    a{
+        color: $white;
+        @each $color in $social-colors{
+            &[class*="btn-#{nth($color,1)}"]{
+                background-color: nth($color,2);
+            }
+        }
+        &.btn-email{
+            background-color: $gray;
+        }
+        &.btn-more{
+            background-color: $green;
+        }
+
+        &:hover{
+            @each $color in $social-colors{
+                &[class*="btn-#{nth($color,1)}"]{
+                    background-color: darken(nth($color,2) ,10%)
+                }
+            }
+            &.btn-email{
+                background-color: darken($gray,10%);
+            }
+            &.btn-more{
+                background-color: darken($green,10%);
+            }
+        }
+    }
+}

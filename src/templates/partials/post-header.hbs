@@ -1,4 +1,6 @@
-<header class="row no-gutters align-items-center">
+{{#switch type}}
+    {{#case "one"}}
+            <header class="row no-gutters align-items-center">
     <div class="col-md-12 post-title">
         <h2 class="title-border"><strong>{{post.title}}</strong></h2>
     </div>
@@ -22,3 +24,6 @@
         <img src="assets/img/post/1.jpg" class="img-fluid post-main-image" alt="">
     </div>
 </header> 
+    {{/case}}
+{{/switch}}
+

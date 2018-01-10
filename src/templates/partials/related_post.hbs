@@ -1,0 +1,22 @@
+
+
+ {{#switch type}}
+    {{#case "one"}}
+            <div class="relates-posts m-3">
+                <h4 class="title-border mb-4"><strong>مقالات  ذات صلة  </strong></h4>
+                <div class="owl-carousel" id="related-post">
+                        {{#each section_b}}
+                            <a href="#" class="item related-item">
+                              <span class="img"> 
+                                    <img src="assets/img/news/b{{@index}}.jpg" alt="">
+                              </span>
+                                <strong class="title text-center"> {{{title}}}</strong>
+                            </a>
+                    {{/each}}
+                </div> 
+            </div>
+    {{/case}}
+{{/switch}}
+
+
+  

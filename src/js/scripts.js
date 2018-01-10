@@ -41,7 +41,7 @@ $(document).ready(function(){
           $('body').css('padding-top','0');
           $('.mainnavbar').removeClass('fixed-top');
       } 
-
+  
         if ($(this).scrollTop() > offset) {
             $(".back-to-top").fadeIn(duration);
         }else{
@@ -102,19 +102,19 @@ $(document).ready(function(){
 
 
       $('.increasefont').on('click', function(e){
-        var currentsize = parseInt($("#postContent").css('font-size'));
+        var currentsize = parseInt($("[id^='postcontent']").css('font-size'));
 		if(currentsize < 24){ 
 		currentsize++;
-		$("#postContent").css({'font-size':currentsize+'px'});
+		$("[id^='postcontent']").css({'font-size':currentsize+'px'});
 		 
 		}
 	});
 
 	$('.decreasefont').on('click', function(e){
-        var currentsize = parseInt($("#postContent").css('font-size'));
+        var currentsize = parseInt($("[id^='postcontent']").css('font-size'));
 		if(currentsize > 14){
 		currentsize--;
-		$("#postContent").css({'font-size':currentsize+'px'});
+		$("[id^='postcontent']").css({'font-size':currentsize+'px'});
 		}
     });
     

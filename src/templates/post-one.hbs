@@ -33,8 +33,8 @@
 <section class="post pt-5 post-one">
     <div class="row no-gutters justify-content-between">
         <div class="col-md-8 ">
-            {{>post-header-one}}  
-            {{>post-fancybox-one}}
+            {{>post-header type="one"}}  
+            {{>post-gallery type="one"}}
             <div class="d-flex  justify-content-between p-3 border-bottom">
                 <span>
                     تم النشر بواسطة  <strong> احمد سرحان </strong>
@@ -44,18 +44,22 @@
                     <button type="button" class="btn btn-secondary en increasefont" > A+</button>
                     <button type="button" class="btn btn-secondary en decreasefont"> A- </button>
                 </div>
-               
             </div>
-            <div class="post-content p-3" id="postContent">
-                    <p>{{post.text_1}}</p>
-                    <p>{{post.text_2}}</p>
 
-                    <div class="embed-responsive embed-responsive-16by9 mb-2">
+
+            <div class="post-content p-3" id="postcontent">
+                <p>{{post.text_1}}</p>
+                <p>{{post.text_2}}</p>
+                <div class="embed-responsive embed-responsive-16by9 mb-2">
                 <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/O5QolgdnnGE"  allow="autoplay; encrypted-media"  allowfullscreen></iframe>
                 </div>
-                 <p class="lead">{{post.text_3}}</p>
-                 {{>comments}}
+                 <p >{{post.text_3}}</p>
             </div>
+
+
+            {{>share-buttons type='full'}}
+            {{>related_post type= "one"}} 
+            {{>comments type='one'}}
         </div>
 
 
@@ -75,7 +79,7 @@
 
 <script>
         $(document).ready(function(){
-            $('.owl-carousel').owlCarousel({
+            $('#postgallery').owlCarousel({
                 margin:10,
                 nav:true,
                 rtl : true,
@@ -92,12 +96,34 @@
                   items:3,
                 } ,
                  1200 : {
-                  items:4,
+                  items:4, 
                 } 
                 }
-            })
+            }) 
+            $('#related-post').owlCarousel({
+                margin:10,
+                nav:false,
+                rtl : true,
+                loop : true,
+                autoplay :true,
+                responsive : {
+                0 : {
+                   items:1,
+                },
+                480 : {
+                   items:2,
+                },
+                768 : {
+                  items:2,
+                } ,
+                 1200 : {
+                  items:3, 
+                } 
+                }
+            }) 
+
         })
 </script>
 </body> 
 </html>  
-
+ 

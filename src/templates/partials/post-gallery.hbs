@@ -1,0 +1,13 @@
+
+
+ {{#switch type}}
+    {{#case "one"}}
+            <div class=" owl-carousel fancyimages" id="postgallery">
+                {{#for 1 9 1}} 
+                <a data-fancybox="gallery" href="assets/img/post/{{this}}.jpg" class="item-fancyimage">
+                    <img src="assets/img/post/{{this}}.jpg" class="img-fluid">
+                </a>
+                {{/for}}
+            </div> 
+    {{/case}}
+{{/switch}} 
