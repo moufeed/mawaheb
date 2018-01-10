@@ -1,0 +1,60 @@
+ <!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{home}}</title>
+    <link rel="stylesheet" href="assets/css/style-{{dir}}.min.css">
+    <link rel="stylesheet" href="assets/plugins/video-js/video-js.min.css">
+    <link rel="stylesheet" href="assets/css/slider.min.css">
+    <script src="assets/js/queryloader2.min.js" ></script>
+    {{>imgloader}}
+</script>
+</head>
+<body>
+      
+<div class="container full-height bg-white bg-shadow p-0">
+{{>header }}
+ 
+  <section class="page-header row no-gutters align-items-end" style="background-image:url('assets/img/bg-header.jpg')">
+         <div class="col p-4">
+             <h2>عنوان الصفحة</h2>
+             <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">الرئيسية</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">عنوان الصفحة</li>
+                </ol>
+            </nav>
+         </div>
+</section>
+    
+    <section class="p15 sections-page ">
+            <div class="row">
+                 {{#each sections}}
+                <div class="col-md-4">
+                    <figure class="section-item  animate fadeInUp" data-wow-duration="500ms" data-wow-delay="{{@index}}00ms" > 
+						<img src="assets/img/sections/{{@index}}.jpg" alt="">
+						<figcaption>
+							<h2>{{title}}</h2>
+							<p class="preif">{{text}}</p>
+							<a href="#">{{../more}}</a>
+						</figcaption>			
+					</figure>
+                    </div>
+                {{/each}}
+                
+            </div>
+    </section>
+    <div class="gray-bar"></div>
+ {{>social-section}}
+{{>footer}}
+</div> 
+{{>searchbox}} 
+ 
+<script src="assets/js/script.min.js"></script>
+<script src="assets/js/slider.min.js"></script>
+<script src="assets/plugins/video-js/video.min.js"></script>
+</body> 
+</html>  
+

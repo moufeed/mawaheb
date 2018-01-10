@@ -32,6 +32,11 @@ h4,h5,h6{
     padding-left: 15px;
     padding-right: 15px;
 }
+.gray-bar{
+    height: 50px;
+    width: 100%;
+    background-color: $gray;
+}
 [data-cate-text]{
     position: relative;
     &:before{
