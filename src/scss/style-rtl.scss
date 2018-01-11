@@ -43,11 +43,12 @@ $colors-sec:(
 );
 
 $overlay-colors:(
-    #{'black'} : $black,
-    #{'white'} : $white,
+    dark : $black,
+    light : $white,
     purple : $bright_purple,
     red : $dull_red,
     navy : $grayishnavy,
+    green :$light_green 
 );
 
  $social : (

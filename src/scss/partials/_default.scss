@@ -171,13 +171,19 @@ h4,h5,h6{
             background-color:rgba(darken(nth($skin,2) ,15%),.6);
         }
         .vjs-big-play-button{
-            background-color:rgba(nth($skin,2),.4); 
+            @if #{nth( $skin , 1 )} == light {
+                 color: $black;
+            }
             &:active{
                 box-shadow: 0 0 0 10px rgba(nth($skin,2),.2);
             }
             &:focus, &:hover{ 
                 background-color:rgba(nth($skin,2),.9); 
             }
+            background-color:rgba(nth($skin,2),.4); 
+            
+            
+            
         }
         &:hover{
             .vjs-big-play-button{

@@ -2,7 +2,7 @@
 
  {{#switch type}}
     {{#case "one"}}
-            <div class=" owl-carousel fancyimages" id="postgallery">
+            <div class=" owl-carousel gallery-one" id="postgallery">
                 {{#for 1 9 1}} 
                 <a data-fancybox="gallery" href="assets/img/post/{{this}}.jpg" class="item-fancyimage">
                     <img src="assets/img/post/{{this}}.jpg" class="img-fluid">
@@ -10,4 +10,16 @@
                 {{/for}}
             </div> 
     {{/case}}
+
+  {{#case "tow"}}
+            <div class=" owl-carousel gallery-tow" id="postgallery">
+                {{#for 1 9 1}} 
+                <div data-fancybox="gallery" href="assets/img/post/{{this}}.jpg" class="item">
+                    <img src="assets/img/post/{{this}}.jpg" class="img-fluid">
+                </div>
+                {{/for}}
+            </div> 
+    {{/case}}
+
+
 {{/switch}} 

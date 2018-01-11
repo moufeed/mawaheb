@@ -20,30 +20,33 @@
                     </div>
                 </div>
             </form>
-    {{/case}}
-{{/switch}}
+
+
+
+
+
 
 
 <div class="comments-box mY-5 mx-3">
-    <h4 class="title-border"><strong>التعليقات</strong></h4>
+    <h4 class="title-border mb-4"><strong>التعليقات</strong></h4>
 
     <div class="">
          
             {{#each comments}}
-            <div class="comment {{#if has_reply}} hr {{/if}}" >
+            <div class="comment {{#if has_reply}} has_reply {{/if}} animate fadeIn" data-wow-duration="500ms" data-wow-delay="{{@index}}00ms" >
                     <header class="d-flex flex-wrap align-items-center">
-                        <img src="assets/img/avaters/1.png" alt="" class="d-none d-md-block" width="45"> 
+                        <img src="assets/img/avaters/1.png" alt="" class="d-none d-md-block" width="40"> 
                         <span class="ml-auto meta">
                             <strong>{{name}} </strong>
                             <small><i class="fa fa-clock-o"></i> {{date}} </small>
                         </span>
-                        <a href="#" class="reply-btn">
+                        <a href="#" class="reply-btn" data-id="c-{{@index}}"> 
                             الرد <i class="fa fa-reply"></i>
                         </a>
                     </header>
-                    <p>
-                        {{comment}}
-                    </p>
+                     <div class="comment-body">
+                         {{comment}}
+                     </div>
                     
                     {{#if has_reply}} 
                     {{#each replies}}
@@ -54,13 +57,13 @@
                                     <strong>   {{name}} </strong>
                                     <small><i class="fa fa-clock-o"></i> {{date}} </small>
                                 </span>
-                                <a href="#" class="reply-btn">
+                                <a href="#" class="reply-btn" >
                                     الرد <i class="fa fa-reply"></i>
                                 </a> 
                             </header>
-                            <p>
-                                {{comment}}  
-                            </p> 
+                             <div class="comment-body">
+                                    {{comment}}
+                                </div>  
                         </div>
                         {{/each}}
                     {{/if}}
@@ -69,3 +72,20 @@
        
     </div>
 </div>
+
+
+ 
+ 
+
+
+
+    {{/case}}
+
+ {{#case "tow"}}
+
+
+{{/case}}
+
+
+{{/switch}}
+

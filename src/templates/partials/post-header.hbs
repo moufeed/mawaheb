@@ -24,6 +24,26 @@
         <img src="assets/img/post/1.jpg" class="img-fluid post-main-image" alt="">
     </div>
 </header> 
+
     {{/case}}
+        
+    {{#case "tow"}}
+        <header class="pr-3">
+            <h2><strong>{{post.title}}</strong></h2>
+            <div class="text-secondary d-flex">
+                 <small>
+                    تم النشر بواسطة  <strong> راكان حمدان </strong>
+                </small>   
+                <small class="mr-3"> | </small>
+                <small class="mr-3 ml-auto"><i class="fa fa-calendar-o" ></i> الثلاثاء 26 ديسمبر 2017</small>
+                <span class="btn-group btn-group-sm" role="group" aria-label="font-size">
+                    <button type="button" class="btn btn-secondary en increasefont" > A+</button>
+                    <button type="button" class="btn btn-secondary en decreasefont"> A- </button>
+                </span>
+            </div>
+        </header>
+{{/case}}   
+
+
 {{/switch}}
 

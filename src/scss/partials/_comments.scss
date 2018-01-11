@@ -1,0 +1,115 @@
+
+
+
+.comment{
+    border:1px solid #f0f0f0;
+    padding-bottom: 15px;
+    &:not(:first-child){
+        border-top: 0;
+    }
+     header{
+         padding-right:10px;
+         border-bottom: 1px solid #f0f0f0;
+         background-color: #f5f5f5;
+         img{
+             margin-left: 10px;
+             margin-top: -30px;
+         }
+     }
+    .meta{
+        strong{
+            margin-left :10px;
+            color:$black_rock ;
+            display: inline-block;
+        }
+        small{
+            display: inline-block;
+            color: darken($gray ,10%);
+        }
+        i{
+            margin-left: 5px;
+        }
+    }
+    .comment-body{
+        padding: 25px 7%
+    }
+    .reply-btn{
+        color: $dark_purple;
+        padding: 6px 8px;
+        border-right: 1px solid #f0f0f0;
+        &:hover{
+            background-color: $green;
+            text-decoration: none;
+            color: $white;
+        }
+    }
+
+    &.reply{
+        margin-right: 5%;
+        border: 0 ;
+        header{
+            background-color: transparent;
+            img{
+                 position: relative;
+                 top: 10px;
+                margin-top: 0;
+            }
+        }
+        .comment-body{
+            padding:10px 7%;
+        }
+        .reply-btn{
+            border: 0;
+        }
+    }
+}
+
+
+/*
+ 
+v class="comments-box mY-5 mx-3">
+    <h4 class="title-border"><strong>التعليقات</strong></h4>
+
+    <div class="">
+         
+            {{#each comments}}
+            <div class="comment {{#if has_reply}} has_reply {{/if}}" >
+                    <header class="d-flex flex-wrap align-items-center">    
+                        <img src="assets/img/avaters/1.png" alt="" class="d-none d-md-block" width="45"> 
+                        <span class="ml-auto meta">
+                            <strong>{{name}} </strong>
+                            <small><i class="fa fa-clock-o"></i> {{date}} </small>
+                        </span>
+                        <a href="#" class="">
+                            الرد <i class="fa fa-reply"></i>
+                        </a>
+                    </header>
+                     <div class="">
+                         {{comment}}
+                     </div>
+                    
+                    {{#if has_reply}} 
+                    {{#each replies}}
+                        <div class="comment reply">
+                            <header class="d-flex flex-wrap align-items-center">
+                                <img src="assets/img/avaters/2.png" alt="" class="d-none d-md-block" width="35">
+                                <span class="ml-auto meta">
+                                    <strong>   {{name}} </strong>
+                                    <small><i class="fa fa-clock-o"></i> {{date}} </small>
+                                </span>
+                                <a href="#" class="reply-btn">
+                                    الرد <i class="fa fa-reply"></i>
+                                </a> 
+                            </header>
+                            <div class="comment-body">
+                         {{comment}}
+                     </div>
+                        </div>
+                        {{/each}}
+                    {{/if}}
+            </div>
+        {{/each}}
+       
+    </div>
+</div>
+/*/

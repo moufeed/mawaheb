@@ -77,6 +77,8 @@
  
 <script src="assets/plugins/video-js/video.min.js"></script>
 
+ 
+
 <script>
         $(document).ready(function(){
             $('#postgallery').owlCarousel({
@@ -121,9 +123,17 @@
                 } 
                 }
             }) 
+        //-  -/-----
 
+          $('.reply-btn').click((e)=>{
+              e.preventDefault(); 
+                 $("html, body").animate({ 
+                 scrollTop: $('.comments-form').offset().top - 30
+              }, 350);
+           })
         })
 </script>
 </body> 
 </html>  
+ 
  
