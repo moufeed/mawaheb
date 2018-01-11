@@ -1,12 +1,13 @@
 
-<div class="share-bar mx-3">
+<div class="share-bar mx-3 {{class}}">
     
 	 
      {{#switch type}}
                 {{#case "full"}}
     <a class=" btn btn-sm btn-share en   btn-twitter rounded-0"
+		
 	   href="https://twitter.com/share?url=  &text=  &via=  "
-	   title="Share on Twitter">
+	   title="مشاركة على تويتر">
         <i class="fa fa-twitter"></i>
 		<span class="share-btn-text">Twitter</span>
 	</a>
@@ -14,7 +15,7 @@
 	 
 	<a class=" btn btn-sm btn-share en  btn-facebook rounded-0"
 	   href="https://www.facebook.com/sharer/sharer.php?u= "
-	   title="Share on Facebook">
+	   title="مشاركة على الفيس بوك">
 		 <i class="fa fa-facebook"></i>
 		<span class="share-btn-text">Facebook</span>
 	</a>
@@ -22,21 +23,21 @@
  
 	<a class=" btn btn-sm btn-share en  btn-google rounded-0"
 	   href="https://plus.google.com/share?url= "
-	   title="Share on Google+">
+	   title="مشاركة على جوجل بلس">
 		<i class="fa fa-google-plus"></i> 
 		<span class="share-btn-text">Google+</span>
 	</a>
 
     <a class=" btn btn-sm btn-share en  btn-email rounded-0"
 	   href="mailto:?subject=  &body=   "
-	   title="Share via Email">
+	   title="مشاركة عبر البريد">
 		<i class="fa fa-envelope-o"></i>
 		<span class="share-btn-text">Email</span>
 	</a>
 
     <a class=" btn btn-sm btn-share en  btn-more rounded-0"
 	   href="https://www.addtoany.com/share_save?linkurl=  "
-	   title=" ">
+	   title="مشاركة">
             <i class="fa fa-share-alt"></i>
 		<span class="share-btn-text sr-only">{{more}}</span>
 	</a>
@@ -48,38 +49,43 @@
 
                {{#case "icon"}}
     <a class=" btn btn-sm btn-share en   btn-twitter rounded-0"
+		data-toggle="tooltip" data-placement="top"  
 	   href="https://twitter.com/share?url=  &text=  &via=  "
-	   title="Share on Twitter">
+	   title="مشاركة عل تويتر">
         <i class="fa fa-twitter"></i>
 		 
 	</a>
 
 	 
 	<a class=" btn btn-sm btn-share en  btn-facebook rounded-0"
+	data-toggle="tooltip" data-placement="top" 
 	   href="https://www.facebook.com/sharer/sharer.php?u= "
-	   title="Share on Facebook">
+	   title="مشاركة على الفيس بوك">
 		 <i class="fa fa-facebook"></i>
 		 
 	</a>
 
  
 	<a class=" btn btn-sm btn-share en  btn-google rounded-0"
+	data-toggle="tooltip" data-placement="top" 
 	   href="https://plus.google.com/share?url= "
-	   title="Share on Google+">
+	   title="مشاركة على جوجل بلس">
 		<i class="fa fa-google-plus"></i> 
 		 
 	</a>
 
     <a class=" btn btn-sm btn-share en  btn-email rounded-0"
+	data-toggle="tooltip" data-placement="top" 
 	   href="mailto:?subject=  &body=   "
-	   title="Share via Email">
+	   title="مشاركة عبر الايميل">
 		<i class="fa fa-envelope-o"></i>
 		 
 	</a>
 
     <a class=" btn btn-sm btn-share en  btn-more rounded-0"
+	data-toggle="tooltip" data-placement="top" 
 	   href="https://www.addtoany.com/share_save?linkurl=  "
-	   title=" ">
+	   title="مشاركة">
             <i class="fa fa-share-alt"></i>
 	 
 	</a>
@@ -89,7 +95,7 @@
       {{#case "text"}}
     <a class=" btn btn-sm btn-share en   btn-twitter rounded-0"
 	   href="https://twitter.com/share?url=  &text=  &via=  "
-	   title="Share on Twitter">
+	   title="مشاركة عل تويتر">
         
 		<span class="share-btn-text">Twitter</span>
 	</a>
@@ -97,7 +103,7 @@
 	 
 	<a class=" btn btn-sm btn-share en  btn-facebook rounded-0"
 	   href="https://www.facebook.com/sharer/sharer.php?u= "
-	   title="Share on Facebook">
+	   title="مشاركة على الفيس بوك">
 		 
 		<span class="share-btn-text">Facebook</span>
 	</a>
@@ -105,21 +111,21 @@
  
 	<a class=" btn btn-sm btn-share en  btn-google rounded-0"
 	   href="https://plus.google.com/share?url= "
-	   title="Share on Google+">
+	   title="مشاركة على جوجل بلس">
 		 
 		<span class="share-btn-text">Google+</span>
 	</a>
 
     <a class=" btn btn-sm btn-share en  btn-email rounded-0"
 	   href="mailto:?subject=  &body=   "
-	   title="Share via Email">
+	     title="مشاركة عبر البريد">
 		 
 		<span class="share-btn-text">Email</span>
 	</a>
 
     <a class=" btn btn-sm btn-share en  btn-more rounded-0"
 	   href="https://www.addtoany.com/share_save?linkurl=  "
-	   title=" ">
+	   title="مشاركة">
           
 		<span class="share-btn-text ">{{more}}</span>
 	</a>

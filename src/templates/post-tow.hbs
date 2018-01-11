@@ -1,4 +1,4 @@
- <!doctype html>
+<!doctype html>
 <html class="no-js">
 <head>
     <meta charset="UTF-8">
@@ -8,108 +8,99 @@
     <link rel="stylesheet" href="assets/css/style-{{dir}}.min.css">
     <link rel="stylesheet" href="assets/plugins/video-js/video-js.min.css">
     <link rel="stylesheet" href="assets/css/slider.min.css">
-    <script src="assets/js/queryloader2.min.js" ></script>
+    <script src="assets/js/queryloader2.min.js"></script>
     {{>imgloader}}
-</script>
+    </script>
 </head>
 <body>
-      
-<div class="container full-height bg-white bg-shadow p-0">
-{{>header }}
- 
-  <section class="page-header row no-gutters align-items-end" style="background-image:url('assets/img/bg-header.jpg')">
-         <div class="col p-4">
-             <h2>منوعات</h2>
-             <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index.html">الرئيسية</a></li>
-                    <li class="breadcrumb-item"><a href="category.html">منوعات</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">{{post.title}}</li>
-                </ol>
-            </nav>
-         </div>
-</section>
-
-
-
-<section class="post pt-5 post-one">
-    <div class="row no-gutters justify-content-between">
-        
-        <div class="col-md-8 ">
-            {{>post-header type="tow"}}  
-            {{>post-gallery type="tow"}}
-            
-
-
-            <div class="post-content p-3" id="postcontent">
-                <p>{{post.text_1}}</p>
-                <p>{{post.text_2}}</p>
-                 
-                  <video id="videoplaye" class="video-js vjs-fluid no-shadow video-skin-light mb-4" controls preload="auto"  
-                                    poster="assets/img/post/4.jpg" data-setup="">
-                                    <source src="assets/videos/1.mp4" type='video/mp4'>
-                                    <source src="assets/videos/1.webm" type='video/webm'>
-                                    <p class="vjs-no-js">
-                                    To view this video please enable JavaScript, and consider upgrading to a web browser that
-                                    <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-                                </p>
-                 </video>
-
-                <p >{{post.text_3}}</p>
+    <div class="container full-height bg-white bg-shadow p-0">
+        {{>header }}
+        <section class="page-header row no-gutters align-items-end" style="background-image:url('assets/img/bg-header.jpg')">
+            <div class="col p-4">
+                <h2>منوعات</h2>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="index.html">الرئيسية</a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="category.html">منوعات</a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">{{post.title}}</li>
+                    </ol>
+                </nav>
             </div>
-
-
-
-<div class="post-author row align-items-center  no-gutters">
-    <div class="author-img rounded-circle col-md-3 col-lg-2"> 
-        <img alt="Isaac Taylor" src="assets/img/avaters/author.png" class="avatar " >
-    </div>
-    <div class="author-content col-md-9 col-lg-10">
-    <h5><strong>راكان حمدان</strong></h5>
-        <p> يعشق الشعر والأدب العربي ولا سيّما شعر نزار قباني ومحمود درويش وفاروق جويدة ويُظهر تأثراً كبيراً بهم في حياته اليومية.</p> 
-        <a target="_blank"  href="http://facebook.com/"><i class="fa fa-facebook"></i></a> 
-        <a target="_blank"  href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
-        <a target="_blank"  href="http://plus.google.com/"><i class="fa fa-google-plus"></i></a>
-        <a target="_blank"  href="http://instagram.com/"><i class="fa fa-instagram"></i></a> 
-    </div>
-</div>
-
-            {{>share-buttons type='full'}}
-            {{>related_post type= "tow"}} 
-            {{>comments type='tow'}}
+        </section>
+        <section class="post pt-5 post-one">
+            <div class="row no-gutters justify-content-between">
+                <div class="col-md-8 ">
+                    {{>post-header type="tow"}} {{>post-gallery type="tow"}}
+                    <div class="post-content p-3" id="postcontent">
+                        <p>{{post.text_1}}</p>
+                        <p>{{post.text_2}}</p>
+                        <video id="videoplaye" class="video-js vjs-fluid no-shadow video-skin-light mb-4" controls preload="auto" poster="assets/img/post/4.jpg"
+                            data-setup="">
+                            <source src="assets/videos/1.mp4" type='video/mp4'>
+                            <source src="assets/videos/1.webm" type='video/webm'>
+                            <p class="vjs-no-js">
+                                To view this video please enable JavaScript, and consider upgrading to a web browser that
+                                <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                            </p>
+                        </video>
+                        <p>{{post.text_3}}</p>
+                    </div>
+                    <div class="d-flex flex-wrap justify-content-center align-items-center statusbar">
+                        <div>
+                            <span>
+                                <i class="fa fa-eye"></i>
+                                <strong class="en">{{random 280 500}}</strong>
+                            </span>
+                            <span>
+                                <i class="fa fa-comments"></i>
+                                <strong class="en">{{random 280 500}}</strong>
+                            </span>
+                        </div>
+                        {{>share-buttons type='icon' class="color-text"}}
+                    </div>
+                    {{>author}} {{>related_post type= "tow"}} {{>comments type='tow'}}
+                </div>
+                <aside class="col-md-4 aside">
+                    {{>sidebar}}
+                </aside>
+        </section>
+        {{>social-section}} {{>footer}}
         </div>
+        {{>searchbox}}
+        <script src="assets/js/script.min.js"></script>
+        <script src="assets/plugins/video-js/video.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('#postgallery').owlCarousel({
+                    margin: 10,
+                    nav: true,
+                    rtl: true,
+                    navText: ['&#xf101;', '&#xf100;'],
+                    autoplay: true,
+                    dots: false,
+                    items: 1,
+                    loop: false,
+                })
+                $('#related-post').owlCarousel({
+                    margin: 0,
+                    nav: false,
+                    rtl: true,
+                    dots: true,
+                    autoplay: true,
+                    loop: true,
+                    responsive : {
+                        0 : {items:1},
+                        480 : {items:2},
+                        768 : {items:2} ,
+                        1200 : {items:3} 
+                        }
+                })
 
-
-
-        <aside  class="col-md-4 aside">
-            {{>sidebar}}
-        </aside>
-</section>
-{{>social-section}} 
-{{>footer}}
-</div> 
-{{>searchbox}}
-  
-<script src="assets/js/script.min.js"></script>
- 
-<script src="assets/plugins/video-js/video.min.js"></script>
-
- 
- <script>
-     $(document).ready(function(){
-            $('#postgallery').owlCarousel({
-                margin:10,
-                nav:true,
-                rtl : true,
-                navText : ['&#xf101;','&#xf100;'], 
-                autoplay :true,
-                items:1,
-                loop:false,
-            }) 
-     })
- </script>
-        
-</body> 
-</html>  
- 
- 
+            })
+        </script>
+</body>
+</html>

@@ -2,7 +2,7 @@
 
  {{#switch type}}
     {{#case "one"}}
-            <div class="relates-posts m-3">
+            <div class=" m-3">
                 <h4 class="title-border mb-4"><strong>مقالات  ذات صلة  </strong></h4>
                 <div class="owl-carousel" id="related-post">
                         {{#each section_b}}
@@ -20,11 +20,23 @@
 
     {{#case "tow"}}
             
+            <div class="related-posts m-3">
+                <h4 class="title-border mb-4"><strong>مقالات  ذات صلة  </strong></h4>
+                <div class="owl-carousel " id="related-post">
+                        {{#each section_b}}
+                            <div class="related-item-b d-flex flex-column justify-content-between">
+                                <a href="post-one.html" class="img">
+                                      <img src="assets/img/news/b{{@index}}.jpg" alt="" class="bg">
+                                      <img src="assets/img/news/b{{@index}}.jpg" alt="">
+                                </a>
+                                <a href="post-one.html" class="title text-center">  {{{title}}} </a>
+                                 <small class="text-center date"> <i class="fa fa-calendar"></i>{{date}}</small>
+                            </div>
+                             
 
-
-
-
-            
+                    {{/each}}
+                </div> 
+            </div>
     {{/case}}
 
 

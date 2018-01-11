@@ -341,6 +341,12 @@ h4,h5,h6{
     border-top: 1px solid #f0f0f0;
     padding-top: 10px;
     margin-bottom: 25px;
+    @include media-breakpoint-down(sm){
+        text-align: center;
+        a{
+            margin-top: 5px;
+        }
+    }
     a{
         color: $white;
         @each $color in $social-colors{
@@ -367,6 +373,55 @@ h4,h5,h6{
             &.btn-more{
                 background-color: darken($green,10%);
             }
+        }
+    }
+    &.color-text{
+        a{
+            background:transparent !important;
+            color: darken($gray,35%);
+            &:hover{
+                 
+                @each $color in $social-colors{
+                    &[class*="btn-#{nth($color,1)}"]{
+                        color: nth($color,2);
+                    }
+                    &.btn-email{
+                        color: darken($blue,10%);
+                    }
+                    &.btn-more{
+                        color: darken($green,10%);
+                    }
+                } 
+            }
+           
+        }
+    }
+}
+
+
+.owl-dots {
+    text-align: center;
+    padding-top: 10px;
+    margin: 15px 0;
+    .owl-dot {
+        display: inline-block;
+        zoom:1;
+        span {
+            width: 10px;
+            height: 10px;
+            margin: 5px 7px;
+            background: $dark_purple;
+            display: block;
+            border-radius: 50%;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            
+        }
+        &:hover span{
+            background:$grayish_purple;
+        }
+        &.active span {
+            background:$grayish_purple;
+            transform: scale(1.5);
         }
     }
 }
