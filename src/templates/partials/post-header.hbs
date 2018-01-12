@@ -44,6 +44,42 @@
         </header>
 {{/case}}   
 
+{{#case "three"}}
+        <header class="pr-3 header-3">
+            <div class="owl-carousel" id="postgallery">
+                  <div class="item">
+                    <div class="embed-responsive embed-responsive-16by9  ">
+                            <iframe src="https://player.vimeo.com/video/132471949"   frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    </div>
+                  </div>
+                    <div class="item">
+                        <img src="assets/img/post/1.jpg" class="img-fluid">
+                    </div>
+                 <div class="item">
+                    <div class="embed-responsive embed-responsive-16by9  ">
+                     <iframe   src="https://www.youtube.com/embed/K9W85KaCfdY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
+                 </div>
+            </div> 
+
+                  <h2><strong>{{post.title}}</strong></h2>
+                  <div class="meta">
+                      <small><i class="fa fa-pencil"></i>  راكان حمدان</small> <b> | </b>
+                      <small><i class="fa fa-calendar-o" ></i> الثلاثاء 26 ديسمبر 2017</small> <b> | </b>
+                      <small><i class="fa fa-eye"></i> {{random 280 500}} </small> <b> | </b>
+                      <small><i class="fa fa-comments-o"></i> {{random 280 500}} </small>
+                      <span class="fontsize">
+                        <button type="button" class="btn btn-link en increasefont" 
+                        data-toggle="tooltip" data-placement="top" title="خط أكبر"> A+</button>
+                        <button type="button" class="btn btn-link en decreasefont"
+                        data-toggle="tooltip" data-placement="top" title="خط أصغر"> A- </button>
+                      </span>
+                    
+                  </div>
+        </header>
+{{/case}}   
 
 {{/switch}}
+
+
 

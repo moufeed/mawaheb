@@ -14,7 +14,7 @@
          img{
              margin-left: 10px;
              margin-top: -30px;
-         }
+         } 
      }
     .meta{
         strong{
@@ -137,3 +137,132 @@
      }
 }
 
+
+
+
+.comments-form-c{
+    .form-control{
+        border: 0;
+        background-color: darken($white,5%);
+    }
+}
+.comment-c{
+    @include clearfix();
+    margin-bottom: 15px;
+    .user-img{
+        float: right;
+        border: 1px solid $black_rock;
+    }
+    
+    .comment-content{
+        float: right;
+        width: calc( 100% - 80px );
+        @include media-breakpoint-down(sm){
+            width: 100%;
+            margin-right: 0px;
+        }
+        margin-right: 10px;
+        background: #f7f7f7;
+        border: 1px solid #e5e5e5;
+       
+    }
+    header{
+        padding: 10px 20px;
+        border-bottom: 1px solid #eee;
+        background-color: $white;
+    }
+    .meta{
+        strong{
+            margin-left :10px;
+            color:lighten($black_rock  ,25%);
+            display: inline-block;
+            @include media-breakpoint-down(sm){
+                font-weight: 100;
+                font-size: 12px;
+            }
+        }
+        small{
+            display: inline-block;
+            color: darken($gray ,30%);
+        }
+        i{
+            margin-left: 5px;
+        }
+    }
+    .reply-btn{
+        color: $black_rock;
+        border: 0;
+        &:hover{
+            color: $green;
+            text-decoration: none;
+        }
+    }
+    .comment-body{
+        padding: 25px 7%
+    }
+
+    &.reply{
+        border-top: 1px solid #e2e2e2;
+        .user-img{
+            border: 0;
+        }
+        .comment-content{
+            border: 0;
+            width: calc( 100% - 45px );
+            @include media-breakpoint-down(sm){
+                width: 100%;
+            }
+            margin: 0;
+        }
+        .comment-body{
+            padding: 20px 4%;
+        }
+       }
+}
+/*
+ 
+ 
+        <div class=" {{#if has_reply}} has_reply {{/if}} animate fadeIn" data-wow-duration="500ms" data-wow-delay="{{@index}}00ms">
+ 
+                < class="d-flex flex-wrap align-items-center">
+                    <span class="ml-auto meta">
+                        <strong>{{name}} </strong>
+                        <small>
+                            <i class="fa fa-clock-o"></i> {{date}} </small>
+                    </span>
+                    <a href="#" class="reply-btn" data-id="c-{{@index}}">
+                        <span class="d-none d-sm-inline"> رد </span>
+                        <i class="fa fa-reply"></i>
+                    </a>
+                </header>
+                <div class="comment-body">
+                    {{comment}}
+                </div>
+
+                {{#if has_reply}} {{#each replies}}
+
+                <div class="comment-c ">
+                    <img src="assets/img/avaters/3.png" alt="" class="user-img d-none d-md-block" width="45">
+                    <div class="comment-content">
+
+                        <header class="d-flex flex-wrap align-items-center">
+
+                            <span class="ml-auto meta">
+                                <strong> {{name}} </strong>
+                                <small>
+                                    <i class="fa fa-clock-o"></i> {{date}} </small>
+                            </span>
+                            <a href="#" class="reply-btn">
+                                <span class="d-none d-sm-inline"> رد </span>
+                                <i class="fa fa-reply"></i>
+                            </a>
+                        </header>
+                        <div class="comment-body">
+                            {{comment}}
+                        </div>
+                    </div>
+
+
+
+                </div>
+*/

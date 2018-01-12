@@ -231,4 +231,106 @@
 }
  
 
-  
+.post-three{
+    .header-3{
+        
+        margin-bottom: 35px;
+        h2{
+            margin-top:25px;
+            color: $dark_grayishnavy;
+            margin-bottom:25px;
+        }
+        .meta{
+            padding: 5px 10px;
+            border: 1px solid #eeeeee;
+            color :darken($gray,15%);
+            small{
+                display: inline-block;
+                margin: 0 3px;
+            }
+            i{
+                margin: 0 4px;  
+            }
+        }
+        .fontsize{
+            float: left;
+        .btn{
+            color :darken($gray,15%);
+            font-size: 80%;
+            padding: 0 5px;
+            &:hover{
+                text-decoration: none;
+                color: $dark_grayishnavy ;
+            }
+        }
+    }
+.owl-carousel{
+    background-color: darken($white ,5%);
+}
+    
+.owl-dots {
+             position: absolute;
+             bottom: -20px;
+             left: -5px;
+             margin: 0;
+             .owl-dot {
+                span {
+                    width: 15px;
+                    height: 6px;
+                    margin: 0 4px;
+                    background: $gray;
+                    display: block;
+                    border-radius:0;
+                }
+                &.active span {
+                    background:$black_rock ; 
+                    transform: scale(1);
+                }
+            }
+        }
+    }
+}
+
+.gallery-three{
+    padding:10px;
+    border: 1px solid #e2e2e2;
+    [data-fancybox]{
+        position: relative;
+        overflow: hidden;
+        display: block;
+        &:before{
+            @include absolute(top right , 0 0);
+            @include square(100%);
+            background: rgba($dark_purple, .5);
+            color: rgba($white ,.5);
+            content: '\f00e'; 
+            transition: all .2s;
+            opacity: 0;
+            font-family: 'FontAwesome';
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        &:hover{
+            &:before{
+                opacity: 1;
+            }
+        }
+    }
+    .card{
+        border: 0;
+    }
+    @include media-breakpoint-down(sm) {
+        column-count:2;
+        column-gap: 3px;
+        .card{
+            margin: 3px 0;
+        }
+    }
+        @include media-breakpoint-up(lg) {
+            column-count: 4;
+         }
+
+}

@@ -334,6 +334,21 @@ h4,h5,h6{
         border-bottom: 2px solid $grayish_purple;
         margin-bottom: -1px;
     }
+    &.red strong{
+        border-bottom: 2px solid $red;
+    }
+    &.green strong{
+        border-bottom: 2px solid $green;
+    }
+    &.navy strong{
+        border-bottom: 2px solid $grayishnavy;
+    } 
+    &.violet strong{
+        border-bottom: 2px solid $light_violet;
+    }
+    &.gray strong{
+        border-bottom: 2px solid $gray;
+    }
 }
 
 

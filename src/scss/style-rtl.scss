@@ -59,8 +59,10 @@ $overlay-colors:(
 // fontawesome  
 $fa-font-path:        "../fonts/fa" ;  
 
+//bootstrap
 
-
+$card-columns-margin : 5px;
+$card-columns-gap: 5px;
 @import
 '../../node_modules/bootstrap/scss/bootstrap.scss',
 '../../node_modules/font-awesome/scss/font-awesome.scss';

@@ -14,12 +14,24 @@
   {{#case "tow"}}
             <div class=" owl-carousel gallery-tow" id="postgallery">
                 {{#for 1 9 1}} 
-                <div data-fancybox="gallery" href="assets/img/post/{{this}}.jpg" class="item">
+                <a data-fancybox="gallery" href="assets/img/post/{{this}}.jpg" class="item">
                     <img src="assets/img/post/{{this}}.jpg" class="img-fluid">
-                </div>
+                </a>
                 {{/for}}
             </div> 
-    {{/case}}
+ {{/case}}
 
+ {{#case "three"}}
+    <div class="card-columns gallery-three mx-3">
+ {{#for 1 9 1}} 
+  <div class="card">
+    <a data-fancybox="gallery" href="assets/img/post/{{this}}.jpg">
+        <img class="card-img rounded-0" src="assets/img/post/{{this}}.jpg" alt="Card image">
+    </a>
+  </div>
+   {{/for}}
+ 
+</div>
+ {{/case}}
 
 {{/switch}} 
